@@ -10,17 +10,42 @@ FarmTech Solutions é um projeto de agricultura inteligente desenvolvido pela FI
 FarmTechSolutions-Completo/
 ├── Fase1/               # Primeira fase - Análise de dados e predições
 │   ├── python_app/      # Aplicação Python para análise
+│   │   ├── main.py
+│   │   ├── gerador_exemplos.py
+│   │   ├── requirements.txt
+│   │   └── *.csv (dados de cultivos)
 │   └── r_app/           # Aplicação R para modelagem estatística
+│       ├── analise.R
+│       ├── clima.R
+│       └── requirements_r.txt
+│
 ├── Fase2/               # Segunda fase - IoT e Sistema Completo
 │   ├── Cap 1/           # IoT com ESP32 e sensores
-│   ├── Cap 6/           # Sistema Python com banco de dados
-│   └── Cap 7/           # Análise de dados do agronegócio
-└── docs/                # Documentação completa do projeto
-    ├── Fase1/           # Documentação da Fase 1
-    └── Fase2/           # Documentação da Fase 2
-        ├── Cap1/
-        ├── Cap6/
-        └── Cap7/
+│   │   ├── FarmTech.ino
+│   │   ├── platformio.ini
+│   │   ├── src/main.cpp
+│   │   └── ir_alem/     # Projetos avançados
+│   ├── Cap 6/           # Sistema Python com banco de dados Oracle
+│   │   ├── main.py
+│   │   ├── database.py
+│   │   ├── requirements.txt
+│   │   └── data/        # Arquivos JSON
+│   └── Cap 7/           # Análise estatística de dados do agronegócio
+│       ├── analise_R_grupo19.R
+│       ├── dados_agronegocio_grupo19.csv
+│       └── graficos/
+│
+└── docs/                # Documentação técnica completa
+    ├── Fase1/           # Guias de instalação e uso
+    │   ├── INSTALL.md
+    │   ├── INSTALL_R.md
+    │   ├── EXEMPLOS_R.md
+    │   ├── TECHNICAL_DOCS.md
+    │   └── TECHNICAL_DOCS_R.md
+    └── Fase2/           # Documentação por capítulo
+        ├── Cap1/        # Calibração, guias, tabelas
+        ├── Cap6/        # Instalação Oracle, integrações
+        └── Cap7/        # Fontes de dados, instalação R
 ```
 
 ## 🚀 Fase 1 - Análise e Predição
