@@ -1,4 +1,52 @@
-# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions
+# FarmTech Solutions
+
+Sistema de agricultura de precisão com IoT (ESP32), Python e R. Minimalista, profissional e baseado no que existe no código.
+
+## Conteúdo
+- `Fase1/python_app`: app em Python para 2 culturas (entrada/saída/atualização/remoção), cálculos de área e exportação CSV
+- `Fase1/r_app`: scripts R para estatística e exemplo de clima (Open-Meteo)
+- `Fase2/Cap 1`: firmware ESP32 (NPK em botões, pH via LDR, umidade via DHT22, relé de irrigação) + `config/diagram.json` (Wokwi)
+- `Fase2/Cap 6`: sistema de gestão em Python (módulos: cultivo, sensores, irrigação, estoque) + SQL
+- `Fase2/Cap 7`: análise R com dataset real
+- `testes/teste_completo.py`: validação automática de todas as fases
+
+## Como executar (Windows/PowerShell)
+
+Validação completa:
+```powershell
+cd FarmTechSolutions-Completo\testes
+python teste_completo.py
+```
+
+Fase 1 — App Python:
+```powershell
+cd ..\Fase1\python_app
+python main.py
+```
+
+Fase 1 — Análises em R (opcional):
+```powershell
+cd ..\r_app
+Rscript analise.R
+Rscript clima.R banana
+```
+
+Fase 2 — Cap 1 (ESP32 no Wokwi):
+- Abrir https://wokwi.com
+- Carregar `Fase2/Cap 1/config/diagram.json`
+- Colar `Fase2/Cap 1/FarmTech.ino` e executar
+
+Fase 2 — Cap 6 (Sistema de Gestão):
+```powershell
+cd ..\..\Fase2\Cap 6
+python main.py
+```
+
+## Autores
+Phellype Massarente • Carlos Costato • Cesar Azeredo
+
+## Licença
+MIT# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions
 
 
 

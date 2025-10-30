@@ -1,0 +1,15 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# R
+.Rhistory
+.Rproj.user/
+
+# Node (if any nested projects)
+node_modules/
+dist/
