@@ -1,21 +1,21 @@
 comprimento,largura,insumo,qtd_insumo,unidade,area,figura
-41,10,Potássio,312.29,kg,205.0,2
-26,26,Potássio,337.88,kg,530.9304,3
-42,42,Potássio,225.82,mL,1385.4456,3
-48,48,Inseticida,380.25,L,1809.5616,3
-16,37,Inseticida,160.6,L,296.0,2
-45,34,Inseticida,311.49,mL,1530,1
-17,18,Potássio,410.32,L,153.0,2
-36,36,Potássio,162.4,g,1017.8783999999999,3
-14,42,Fosfato,476.23,L,588,1
-44,12,Fosfato,392.24,kg,264.0,2
-44,39,Pulverizar 500 mL/metro,248.99,g,858.0,2
-7,35,Nitrogênio,497.09,L,122.5,2
-48,48,Nitrogênio,196.75,g,1809.5616,3
-28,26,Herbicida,425.74,L,728,1
-24,24,Nitrogênio,26.26,kg,452.3904,3
-15,9,Fosfato,142.74,mL,135,1
-9,22,Herbicida,292.18,kg,198,1
-42,12,Nitrogênio,358.12,g,252.0,2
-12,16,Nitrogênio,24.68,L,96.0,2
-10,10,Nitrogênio,451.66,kg,78.53999999999999,3
+36,36,Potássio,135.35,mL,1017.8783999999999,3
+33,40,Nitrogênio,22.83,L,1320,1
+42,42,Fosfato,106.32,L,1385.4456,3
+22,22,Pulverizar 500 mL/metro,353.53,L,380.1336,3
+27,9,Pulverizar 500 mL/metro,427.74,L,243,1
+50,50,Inseticida,262.03,mL,1963.5,3
+16,50,Inseticida,250.49,kg,800,1
+42,42,Herbicida,68.58,g,1385.4456,3
+48,48,Nitrogênio,498.43,g,1809.5616,3
+30,30,Pulverizar 500 mL/metro,176.76,mL,706.86,3
+25,45,Nitrogênio,400.93,L,562.5,2
+24,20,Pulverizar 500 mL/metro,220.9,L,240.0,2
+24,24,Inseticida,88.65,g,452.3904,3
+6,23,Inseticida,368.84,g,138,1
+18,20,Inseticida,123.32,kg,180.0,2
+46,46,Fosfato,338.7,g,1661.9064,3
+43,19,Potássio,461.76,mL,408.5,2
+48,25,Fosfato,363.81,kg,1200,1
+34,24,Fosfato,413.33,g,408.0,2
+12,25,Pulverizar 500 mL/metro,305.03,kg,150.0,2
