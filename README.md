@@ -1,170 +1,337 @@
-# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions
+# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions
 
 
 
-> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.
+Sistema inteligente de agricultura de precisão com IoT, análise de dados e automação.
 
 
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.
+
+[![R](https://img.shields.io/badge/R-4.0+-276DC3.svg)](https://www.r-project.org/)
+
+[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)
+
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+---
+
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+
+## 📋 Sobre
 
 [![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
 
+Plataforma completa para agricultura inteligente que integra:
+
 [![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)
 
+- **IoT com ESP32** - Monitoramento e controle automático de irrigação
 
+- **Análise de Dados** - Processamento estatístico em Python e R
+
+- **Gestão Agrícola** - Sistema completo com banco de dados Oracle
 
 ------
 
+O sistema monitora NPK, pH do solo e umidade em tempo real, automatizando decisões de irrigação.
 
+
+
+---
 
 ## 📖 Sobre o Projeto## 📖 Sobre o Projeto
 
+## 👥 Autores
 
+
+
+**Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**
 
 **FarmTech Solutions** é uma solução completa para **agricultura inteligente**, combinando:**FarmTech Solutions** é uma solução completa para **agricultura inteligente**, combinando:
 
+---
 
+
+
+## 🏗️ Estrutura do Projeto
 
 - 🤖 **IoT & Automação** - Sistema de irrigação inteligente com ESP32- 🤖 **IoT & Automação** - Sistema de irrigação inteligente com ESP32
 
-- 📊 **Análise de Dados** - Processamento estatístico de dados agrícolas- 📊 **Análise de Dados** - Processamento estatístico de dados agrícolas
+```
 
-- 🗄️ **Gestão Completa** - Sistema de gerenciamento com banco de dados Oracle- 🗄️ **Gestão Completa** - Sistema de gerenciamento com banco de dados Oracle
+FarmTechSolutions-Completo/- 📊 **Análise de Dados** - Processamento estatístico de dados agrícolas- 📊 **Análise de Dados** - Processamento estatístico de dados agrícolas
 
-- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos
+│
+
+├── Fase1/                          # Análise de Dados- 🗄️ **Gestão Completa** - Sistema de gerenciamento com banco de dados Oracle- 🗄️ **Gestão Completa** - Sistema de gerenciamento com banco de dados Oracle
+
+│   ├── python_app/                 # Sistema Python de gestão de cultivos
+
+│   └── r_app/                      # Análise estatística em R- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos
+
+│
+
+├── Fase2/                          # IoT e Sistemas Integrados
+
+│   ├── Cap 1/                      # Sistema IoT ESP32 + Sensores
+
+│   ├── Cap 6/                      # Sistema de Gestão com OracleO sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação.O sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação baseadas em dados científicos.
+
+│   └── Cap 7/                      # Análise de dados reais (CONAB/IBGE)
+
+│
+
+├── testes/                         # Scripts de validação automática
+
+└── docs/                           # Documentação técnica------
+
+```
 
 
 
-O sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação.O sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação baseadas em dados científicos.
-
-
-
-------
-
-
+---
 
 ## 👥 Autores## 👥 Autores
 
+## 🚀 Funcionalidades
 
+
+
+### Fase 1: Análise de Dados
 
 **Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo****Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**
 
+**Python Application**
 
+- Cadastro interativo de cultivos (Banana e Milho)
 
-------
+- Cálculo automático de área plantada
 
+- Estimativa de insumos por m²------
 
-
-## 🚀 Features## 🚀 Features
-
-
-
-### 🌱 Fase 1: Análise e Predição de Dados### 🌱 Fase 1: Análise e Predição de Dados
+- Exportação para CSV
 
 
 
-#### Python Application#### Python Application
+**R Statistical Analysis**
+
+- Análise estatística completa## 🚀 Features## 🚀 Features
+
+- Visualizações (histogramas, boxplots)
+
+- Correlação entre variáveis
+
+
+
+### Fase 2: IoT e Gestão### 🌱 Fase 1: Análise e Predição de Dados### 🌱 Fase 1: Análise e Predição de Dados
+
+
+
+**ESP32 IoT (Cap 1)**
+
+- Sensores: NPK, pH, temperatura, umidade
+
+- Controle automático de irrigação#### Python Application#### Python Application
+
+- Simulação Wokwi disponível
 
 - ✅ Sistema interativo de cadastro de cultivos (Banana e Milho)- ✅ Sistema interativo de cadastro de cultivos (Banana e Milho)
 
-- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)
+**Sistema de Gestão (Cap 6)**
 
-- ✅ Estimativa de insumos necessários por m²- ✅ Estimativa de insumos necessários por m²
+- Arquitetura modular Python- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)
 
-- ✅ Exportação de dados para CSV- ✅ Exportação de dados para CSV
+- Integração com Oracle Database
 
-- ✅ Validação de entrada e tratamento de erros- ✅ Validação de entrada e tratamento de erros
+- Módulos: cultivos, sensores, irrigação, estoque- ✅ Estimativa de insumos necessários por m²- ✅ Estimativa de insumos necessários por m²
 
 
+
+**Análise de Dados Reais (Cap 7)**- ✅ Exportação de dados para CSV- ✅ Exportação de dados para CSV
+
+- Dados CONAB/IBGE de produção agrícola
+
+- Estatísticas por região- ✅ Validação de entrada e tratamento de erros- ✅ Validação de entrada e tratamento de erros
+
+- Testes estatísticos e visualizações
+
+
+
+---
 
 #### R Statistical Analysis#### R Statistical Analysis
 
+## 🛠️ Tecnologias
+
 - 📊 Análise estatística completa (média, mediana, desvio padrão)- 📊 Análise estatística completa (média, mediana, desvio padrão)
 
-- 📈 Visualizações interativas (histogramas, boxplots)- 📈 Visualizações interativas (histogramas, boxplots)
+- **Linguagens:** Python, R, C++ (Arduino), SQL
 
-- 🔍 Distribuição por tipo geométrico e unidade de medida- 🔍 Distribuição por tipo geométrico e unidade de medida
+- **Hardware:** ESP32, sensores NPK/pH, DHT22- 📈 Visualizações interativas (histogramas, boxplots)- 📈 Visualizações interativas (histogramas, boxplots)
 
-- 📉 Análise de correlação entre variáveis- 📉 Análise de correlação entre variáveis
+- **Banco de Dados:** Oracle 19c, JSON, CSV
 
-
-
-------
+- **Ferramentas:** PlatformIO, Wokwi- 🔍 Distribuição por tipo geométrico e unidade de medida- 🔍 Distribuição por tipo geométrico e unidade de medida
 
 
+
+---- 📉 Análise de correlação entre variáveis- 📉 Análise de correlação entre variáveis
+
+
+
+## 📦 Instalação
+
+
+
+### Requisitos------
+
+- Python 3.8+
+
+- R 4.0+ (opcional)
+
+- Git
 
 ### 🤖 Fase 2: IoT e Sistemas Integrados### 🤖 Fase 2: IoT e Sistemas Integrados
 
-
-
-#### Capítulo 1: Sistema IoT com ESP32#### Capítulo 1: Sistema IoT com ESP32
-
-
-
-**Hardware:****Hardware:**
-
-- ESP32 microcontroller- ESP32 microcontroller
-
-- Sensores NPK (Nitrogênio, Fósforo, Potássio)- Sensores NPK (Nitrogênio, Fósforo, Potássio)
-
-- Sensor de pH do solo (LDR)- Sensor de pH do solo (LDR)
-
-- DHT22 (temperatura e umidade)- DHT22 (temperatura e umidade)
-
-- Relé para controle de irrigação- Relé para controle de irrigação
+### Clone
 
 
 
-**Funcionalidades:****Funcionalidades:**
+```bash
 
-- ⚡ Leitura de sensores em tempo real- ⚡ Leitura de sensores em tempo real
+git clone https://github.com/Cesar-Azeredo/FarmTechSolutions-Completo.git#### Capítulo 1: Sistema IoT com ESP32#### Capítulo 1: Sistema IoT com ESP32
 
-- 🧠 Decisão automática de irrigação- 🧠 Decisão automática de irrigação
+cd FarmTechSolutions-Completo
 
-- 📊 Log de dados via Serial Monitor- 📊 Log de dados via Serial Monitor
+```
 
-- 🔧 Calibração baseada em dados científicos- 🔧 Calibração baseada em dados científicos (EMBRAPA/IAC)
+
+
+### Uso Rápido**Hardware:****Hardware:**
+
+
+
+**Python App (Fase 1)**- ESP32 microcontroller- ESP32 microcontroller
+
+```bash
+
+cd Fase1/python_app- Sensores NPK (Nitrogênio, Fósforo, Potássio)- Sensores NPK (Nitrogênio, Fósforo, Potássio)
+
+python main.py
+
+```- Sensor de pH do solo (LDR)- Sensor de pH do solo (LDR)
+
+
+
+**Análise R (Fase 1)**- DHT22 (temperatura e umidade)- DHT22 (temperatura e umidade)
+
+```bash
+
+cd Fase1/r_app- Relé para controle de irrigação- Relé para controle de irrigação
+
+Rscript analise.R
+
+```
+
+
+
+**Sistema ESP32 (Fase 2)****Funcionalidades:****Funcionalidades:**
+
+- Simular online: [wokwi.com](https://wokwi.com) + carregar `Fase2/Cap 1/config/diagram.json`
+
+- Hardware real: Usar PlatformIO- ⚡ Leitura de sensores em tempo real- ⚡ Leitura de sensores em tempo real
+
+
+
+**Sistema de Gestão (Fase 2)**- 🧠 Decisão automática de irrigação- 🧠 Decisão automática de irrigação
+
+```bash
+
+cd Fase2/Cap\ 6- 📊 Log de dados via Serial Monitor- 📊 Log de dados via Serial Monitor
+
+pip install cx_Oracle
+
+python main.py- 🔧 Calibração baseada em dados científicos- 🔧 Calibração baseada em dados científicos (EMBRAPA/IAC)
+
+```
 
 - 🌐 Suporte para simulação Wokwi- 🌐 Suporte para simulação Wokwi
 
+---
 
+
+
+## ✅ Validação
 
 **Projetos Avançados (ir_alem/):****Projetos Avançados (ir_alem/):**
 
+Execute o teste completo:
+
 - 🐍 API Python para comunicação serial com ESP32- 🐍 API Python para comunicação serial com ESP32
 
-- 📈 Modelos preditivos em R para otimização- 📈 Modelos preditivos em R para otimização
+```bash
 
-- 🔗 Integração completa Python + R + ESP32- 🔗 Integração completa Python + R + ESP32
+cd testes- 📈 Modelos preditivos em R para otimização- 📈 Modelos preditivos em R para otimização
 
+python teste_completo.py
 
-
-------
-
-
-
-#### Capítulo 6: Sistema de Gestão Agrícola#### Capítulo 6: Sistema de Gestão Agrícola
+```- 🔗 Integração completa Python + R + ESP32- 🔗 Integração completa Python + R + ESP32
 
 
+
+Valida automaticamente todas as fases do projeto.
+
+
+
+---------
+
+
+
+## 📚 Documentação
+
+
+
+Consulte [`docs/`](docs/) para:#### Capítulo 6: Sistema de Gestão Agrícola#### Capítulo 6: Sistema de Gestão Agrícola
+
+- Guias de instalação detalhados
+
+- Instruções de uso
+
+- Documentação técnica
 
 **Stack Tecnológico:****Stack Tecnológico:**
 
+---
+
 - Python 3.8+- Python 3.8+
+
+## 📄 Licença
 
 - Oracle Database 19c- Oracle Database 19c
 
+MIT License - veja [LICENSE](LICENSE) para detalhes.
+
 - Arquitetura modular (MVC)- Arquitetura modular (MVC)
 
+---
 
+
+
+<div align="center">
 
 **Módulos:****Módulos:**
 
-- 🌾 `cultivo_manager` - CRUD de cultivos- 🌾 `cultivo_manager` - CRUD de cultivos
+**🌾 FarmTech Solutions**  
 
-- 📡 `sensor_monitor` - Leitura e processamento de sensores- 📡 `sensor_monitor` - Leitura e processamento de sensores
+*Tecnologia para agricultura sustentável*- 🌾 `cultivo_manager` - CRUD de cultivos- 🌾 `cultivo_manager` - CRUD de cultivos
+
+
+
+</div>- 📡 `sensor_monitor` - Leitura e processamento de sensores- 📡 `sensor_monitor` - Leitura e processamento de sensores
+
 
 - 💧 `irrigacao_controller` - Lógica de irrigação inteligente- 💧 `irrigacao_controller` - Lógica de irrigação inteligente
 
