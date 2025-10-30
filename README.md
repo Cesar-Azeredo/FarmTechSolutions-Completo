@@ -1,264 +1,428 @@
-# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions
+# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions# 🌾 FarmTech Solutions
 
 
 
-Sistema inteligente de agricultura de precisão com IoT, análise de dados e automação.
+Sistema completo de agricultura de precisão com IoT, análise de dados e automação de irrigação.
 
 
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)Sistema inteligente de agricultura de precisão com IoT, análise de dados e automação.
 
 [![R](https://img.shields.io/badge/R-4.0+-276DC3.svg)](https://www.r-project.org/)
 
-[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)
+[![ESP32](https://img.shields.io/badge/ESP32-Wokwi-orange.svg)](https://wokwi.com/)
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.> **Sistema inteligente de agricultura de precisão** integrando IoT, análise de dados e machine learning para otimização de cultivos agrícolas.
 
 ---
 
-[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+[![R](https://img.shields.io/badge/R-4.0+-276DC3.svg)](https://www.r-project.org/)
 
-## 📋 Sobre
+## 📖 Sobre o Projeto
 
-[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
+[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)
 
-Plataforma completa para agricultura inteligente que integra:
+A **FarmTech Solutions** é uma startup que desenvolve tecnologia para agricultura digital. Este projeto implementa um sistema completo de gestão agrícola que integra:
 
-[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-- **IoT com ESP32** - Monitoramento e controle automático de irrigação
+- **Gestão de Cultivos** - Sistema Python para cálculo de área plantada e manejo de insumos
 
-- **Análise de Dados** - Processamento estatístico em Python e R
+- **Análise Estatística** - Processamento de dados em R com estatísticas e API meteorológica[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+- **IoT ESP32** - Monitoramento de NPK, pH e umidade com irrigação automatizada
+
+- **Sistema de Gestão** - Plataforma completa com banco de dados Oracle---
+
+
+
+---[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+
+
+
+## 👥 Equipe## 📋 Sobre
+
+
+
+**Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
+
+
+
+---Plataforma completa para agricultura inteligente que integra:
+
+
+
+## 🎯 Funcionalidades[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)[![ESP32](https://img.shields.io/badge/ESP32-IoT-orange.svg)](https://www.espressif.com/)
+
+
+
+### Fase 1: Gestão de Cultivos e Análise- **IoT com ESP32** - Monitoramento e controle automático de irrigação
+
+
+
+#### Python Application- **Análise de Dados** - Processamento estatístico em Python e R
+
+Aplicação completa para gestão de **2 culturas** (Banana e Milho):
 
 - **Gestão Agrícola** - Sistema completo com banco de dados Oracle
 
-------
+- ✅ **Menu interativo** com 5 opções:
 
-O sistema monitora NPK, pH do solo e umidade em tempo real, automatizando decisões de irrigação.
+  - Entrada de dados------
+
+  - Saída de dados (impressão no terminal)
+
+  - Atualização de dados em posições específicasO sistema monitora NPK, pH do solo e umidade em tempo real, automatizando decisões de irrigação.
+
+  - Deleção de dados
+
+  - Sair do programa
 
 
 
----
+- ✅ **Cálculo de área plantada** com figuras geométricas:---
 
-## 📖 Sobre o Projeto## 📖 Sobre o Projeto
+  - Banana: Retângulo, Trapézio, Círculo
 
-## 👥 Autores
+  - Milho: Retângulo, Trapézio, Círculo## 📖 Sobre o Projeto## 📖 Sobre o Projeto
 
 
+
+- ✅ **Manejo de insumos**:## 👥 Autores
+
+  - Tipos: Fosfato, Nitrogênio, Potássio, Herbicida, Inseticida
+
+  - Cálculo automático de quantidade necessária (mL, L, kg, g)
+
+  - Exemplo: "Pulverizar 500 mL/metro no café"
 
 **Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**
 
-**FarmTech Solutions** é uma solução completa para **agricultura inteligente**, combinando:**FarmTech Solutions** é uma solução completa para **agricultura inteligente**, combinando:
+- ✅ **Estrutura de dados**:
 
----
+  - Dados organizados em vetores (listas Python)**FarmTech Solutions** é uma solução completa para **agricultura inteligente**, combinando:**FarmTech Solutions** é uma solução completa para **agricultura inteligente**, combinando:
+
+  - Rotinas de loop e decisão
+
+  - Exportação para CSV---
 
 
 
-## 🏗️ Estrutura do Projeto
+#### R Statistical Analysis
+
+- 📊 **Estatísticas básicas**: média, mediana, desvio padrão
+
+- 📈 **Análise de distribuição** por tipo geométrico e unidade## 🏗️ Estrutura do Projeto
+
+- 🌦️ **API Meteorológica** (Ir Além): Integração com Open-Meteo para dados climáticos
 
 - 🤖 **IoT & Automação** - Sistema de irrigação inteligente com ESP32- 🤖 **IoT & Automação** - Sistema de irrigação inteligente com ESP32
 
+---
+
 ```
+
+### Fase 2: IoT e Automação
 
 FarmTechSolutions-Completo/- 📊 **Análise de Dados** - Processamento estatístico de dados agrícolas- 📊 **Análise de Dados** - Processamento estatístico de dados agrícolas
 
+#### Capítulo 1: Sistema de Irrigação Inteligente (ESP32)
+
 │
+
+**Objetivo**: Monitorar NPK, pH e umidade para controle automático de irrigação.
 
 ├── Fase1/                          # Análise de Dados- 🗄️ **Gestão Completa** - Sistema de gerenciamento com banco de dados Oracle- 🗄️ **Gestão Completa** - Sistema de gerenciamento com banco de dados Oracle
 
-│   ├── python_app/                 # Sistema Python de gestão de cultivos
+**Hardware Simulado no Wokwi**:
 
-│   └── r_app/                      # Análise estatística em R- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos
+- 🟢 **3 Botões Verdes** → Sensores NPK (Nitrogênio, Fósforo, Potássio)│   ├── python_app/                 # Sistema Python de gestão de cultivos
+
+- 💡 **LDR (Fotoresistor)** → Sensor de pH (simula pH de 0-14)
+
+- 🌡️ **DHT22** → Sensor de umidade do solo (simula umidade %)│   └── r_app/                      # Análise estatística em R- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos- 🔬 **Machine Learning** - Modelos preditivos para otimização de cultivos
+
+- 🔵 **Relé Azul** → Bomba d'água (irrigação automática)
 
 │
 
-├── Fase2/                          # IoT e Sistemas Integrados
+**Lógica de Irrigação**:
 
-│   ├── Cap 1/                      # Sistema IoT ESP32 + Sensores
+```├── Fase2/                          # IoT e Sistemas Integrados
 
-│   ├── Cap 6/                      # Sistema de Gestão com OracleO sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação.O sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação baseadas em dados científicos.
+Irrigar SE:
+
+  - NPK adequado (botões pressionados conforme cultura)│   ├── Cap 1/                      # Sistema IoT ESP32 + Sensores
+
+  - pH entre 5.5 e 7.5
+
+  - Umidade < 40%│   ├── Cap 6/                      # Sistema de Gestão com OracleO sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação.O sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, tomando decisões automáticas de irrigação baseadas em dados científicos.
+
+```
 
 │   └── Cap 7/                      # Análise de dados reais (CONAB/IBGE)
 
-│
+**Culturas Suportadas**:
+
+- 🍌 **Banana**: N=15g/m², P=10g/m², K=20g/m²│
+
+- 🌽 **Milho**: N=12g/m², P=8g/m², K=10g/m²
 
 ├── testes/                         # Scripts de validação automática
 
-└── docs/                           # Documentação técnica------
+**Projetos Ir Além**:
+
+- 🐍 **Python + API**: Integração com OpenWeather para prever chuva e ajustar irrigação└── docs/                           # Documentação técnica------
+
+- 📊 **R + Análise**: Decisão estatística de irrigação usando Data Science
 
 ```
 
+#### Capítulo 6: Sistema de Gestão Agrícola
+
+Sistema Python modular com Oracle Database:
+
+- `cultivo_manager.py` - CRUD de cultivos
+
+- `sensor_monitor.py` - Monitoramento de sensores---
+
+- `irrigacao_controller.py` - Controle de irrigação
+
+- `estoque_manager.py` - Gestão de insumos## 👥 Autores## 👥 Autores
+
+- `database.py` - Integração Oracle
+
+- `file_utils.py` - Persistência JSON## 🚀 Funcionalidades
 
 
----
 
-## 👥 Autores## 👥 Autores
+#### Capítulo 7: Análise de Dados Reais
 
-## 🚀 Funcionalidades
+- Dados CONAB/IBGE de produção de banana e milho (2024)
 
+- 35 registros de propriedades por região### Fase 1: Análise de Dados
 
-
-### Fase 1: Análise de Dados
+- Análise estatística completa em R
 
 **Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo****Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**
 
+---
+
 **Python Application**
+
+## 🏗️ Estrutura do Projeto
 
 - Cadastro interativo de cultivos (Banana e Milho)
 
-- Cálculo automático de área plantada
+```
 
-- Estimativa de insumos por m²------
+FarmTechSolutions-Completo/- Cálculo automático de área plantada
 
-- Exportação para CSV
+│
 
+├── Fase1/                          # Fase 1: Gestão e Análise- Estimativa de insumos por m²------
 
+│   ├── python_app/
 
-**R Statistical Analysis**
+│   │   ├── main.py                 # App principal (681 linhas)- Exportação para CSV
 
-- Análise estatística completa## 🚀 Features## 🚀 Features
+│   │   ├── gerador_exemplos.py    # Gerador de dados de teste
 
-- Visualizações (histogramas, boxplots)
+│   │   ├── banana.csv              # Dataset banana (20 registros)
 
-- Correlação entre variáveis
+│   │   └── milho.csv               # Dataset milho (20 registros)
 
+│   └── r_app/**R Statistical Analysis**
 
+│       ├── analise.R               # Análise estatística
 
-### Fase 2: IoT e Gestão### 🌱 Fase 1: Análise e Predição de Dados### 🌱 Fase 1: Análise e Predição de Dados
+│       └── clima.R                 # API meteorológica (Ir Além)- Análise estatística completa## 🚀 Features## 🚀 Features
 
+│
 
+├── Fase2/                          # Fase 2: IoT e Sistemas- Visualizações (histogramas, boxplots)
 
-**ESP32 IoT (Cap 1)**
+│   ├── Cap 1/                      # IoT ESP32
 
-- Sensores: NPK, pH, temperatura, umidade
+│   │   ├── FarmTech.ino           # Código Arduino (854 linhas)- Correlação entre variáveis
 
-- Controle automático de irrigação#### Python Application#### Python Application
+│   │   ├── src/main.cpp           # Código C++ PlatformIO
 
-- Simulação Wokwi disponível
+│   │   ├── config/
 
-- ✅ Sistema interativo de cadastro de cultivos (Banana e Milho)- ✅ Sistema interativo de cadastro de cultivos (Banana e Milho)
+│   │   │   └── diagram.json       # Configuração Wokwi
 
-**Sistema de Gestão (Cap 6)**
+│   │   └── ir_alem/               # Projetos Ir Além### Fase 2: IoT e Gestão### 🌱 Fase 1: Análise e Predição de Dados### 🌱 Fase 1: Análise e Predição de Dados
 
-- Arquitetura modular Python- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)
+│   │       ├── iralempython/      # Python + API OpenWeather
 
-- Integração com Oracle Database
+│   │       └── iralemR/           # R + Análise Estatística
 
-- Módulos: cultivos, sensores, irrigação, estoque- ✅ Estimativa de insumos necessários por m²- ✅ Estimativa de insumos necessários por m²
+│   │
 
+│   ├── Cap 6/                     # Sistema de Gestão**ESP32 IoT (Cap 1)**
 
+│   │   ├── main.py
 
-**Análise de Dados Reais (Cap 7)**- ✅ Exportação de dados para CSV- ✅ Exportação de dados para CSV
+│   │   ├── modules/               # 6 módulos Python- Sensores: NPK, pH, temperatura, umidade
 
-- Dados CONAB/IBGE de produção agrícola
+│   │   ├── data/                  # JSON (cultivos, sensores, etc)
 
-- Estatísticas por região- ✅ Validação de entrada e tratamento de erros- ✅ Validação de entrada e tratamento de erros
+│   │   └── sql/                   # Scripts Oracle- Controle automático de irrigação#### Python Application#### Python Application
 
-- Testes estatísticos e visualizações
+│   │
+
+│   └── Cap 7/                     # Análise de Dados Reais- Simulação Wokwi disponível
+
+│       ├── analise_R_grupo19.R    # Análise CONAB/IBGE
+
+│       └── dados_agronegocio_grupo19.csv- ✅ Sistema interativo de cadastro de cultivos (Banana e Milho)- ✅ Sistema interativo de cadastro de cultivos (Banana e Milho)
+
+│
+
+├── testes/**Sistema de Gestão (Cap 6)**
+
+│   └── teste_completo.py          # Validação automática
+
+│- Arquitetura modular Python- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)- ✅ Cálculo automático de área plantada (círculo, retângulo, quadrado)
+
+└── docs/                           # Documentação
+
+    ├── README.md- Integração com Oracle Database
+
+    ├── INSTALL.md
+
+    └── USAGE.md- Módulos: cultivos, sensores, irrigação, estoque- ✅ Estimativa de insumos necessários por m²- ✅ Estimativa de insumos necessários por m²
+
+```
 
 
 
 ---
 
-#### R Statistical Analysis#### R Statistical Analysis
+**Análise de Dados Reais (Cap 7)**- ✅ Exportação de dados para CSV- ✅ Exportação de dados para CSV
 
-## 🛠️ Tecnologias
+## 🚀 Instalação e Uso
 
-- 📊 Análise estatística completa (média, mediana, desvio padrão)- 📊 Análise estatística completa (média, mediana, desvio padrão)
+- Dados CONAB/IBGE de produção agrícola
 
-- **Linguagens:** Python, R, C++ (Arduino), SQL
+### Pré-requisitos
 
-- **Hardware:** ESP32, sensores NPK/pH, DHT22- 📈 Visualizações interativas (histogramas, boxplots)- 📈 Visualizações interativas (histogramas, boxplots)
-
-- **Banco de Dados:** Oracle 19c, JSON, CSV
-
-- **Ferramentas:** PlatformIO, Wokwi- 🔍 Distribuição por tipo geométrico e unidade de medida- 🔍 Distribuição por tipo geométrico e unidade de medida
-
-
-
----- 📉 Análise de correlação entre variáveis- 📉 Análise de correlação entre variáveis
-
-
-
-## 📦 Instalação
-
-
-
-### Requisitos------
-
-- Python 3.8+
+- Python 3.8+- Estatísticas por região- ✅ Validação de entrada e tratamento de erros- ✅ Validação de entrada e tratamento de erros
 
 - R 4.0+ (opcional)
 
-- Git
-
-### 🤖 Fase 2: IoT e Sistemas Integrados### 🤖 Fase 2: IoT e Sistemas Integrados
-
-### Clone
+- Git- Testes estatísticos e visualizações
 
 
 
-```bash
+### Instalação
 
-git clone https://github.com/Cesar-Azeredo/FarmTechSolutions-Completo.git#### Capítulo 1: Sistema IoT com ESP32#### Capítulo 1: Sistema IoT com ESP32
 
-cd FarmTechSolutions-Completo
+
+```bash---
+
+git clone https://github.com/Cesar-Azeredo/FarmTechSolutions-Completo.git
+
+cd FarmTechSolutions-Completo#### R Statistical Analysis#### R Statistical Analysis
+
+```
+
+## 🛠️ Tecnologias
+
+### Uso Rápido
+
+- 📊 Análise estatística completa (média, mediana, desvio padrão)- 📊 Análise estatística completa (média, mediana, desvio padrão)
+
+#### Fase 1 - Python App
+
+```bash- **Linguagens:** Python, R, C++ (Arduino), SQL
+
+cd Fase1/python_app
+
+python main.py- **Hardware:** ESP32, sensores NPK/pH, DHT22- 📈 Visualizações interativas (histogramas, boxplots)- 📈 Visualizações interativas (histogramas, boxplots)
+
+```
+
+- **Banco de Dados:** Oracle 19c, JSON, CSV
+
+**Menu**:
+
+```- **Ferramentas:** PlatformIO, Wokwi- 🔍 Distribuição por tipo geométrico e unidade de medida- 🔍 Distribuição por tipo geométrico e unidade de medida
+
+1. Entrada de dados (cadastrar cultivos)
+
+2. Saída de dados (visualizar)
+
+3. Atualização de dados (editar)
+
+4. Deleção de dados (remover)---- 📉 Análise de correlação entre variáveis- 📉 Análise de correlação entre variáveis
+
+5. Sair
 
 ```
 
 
 
-### Uso Rápido**Hardware:****Hardware:**
-
-
-
-**Python App (Fase 1)**- ESP32 microcontroller- ESP32 microcontroller
+#### Fase 1 - Análise R## 📦 Instalação
 
 ```bash
 
-cd Fase1/python_app- Sensores NPK (Nitrogênio, Fósforo, Potássio)- Sensores NPK (Nitrogênio, Fósforo, Potássio)
-
-python main.py
-
-```- Sensor de pH do solo (LDR)- Sensor de pH do solo (LDR)
+cd Fase1/r_app
 
 
 
-**Análise R (Fase 1)**- DHT22 (temperatura e umidade)- DHT22 (temperatura e umidade)
-
-```bash
-
-cd Fase1/r_app- Relé para controle de irrigação- Relé para controle de irrigação
+# Análise estatística### Requisitos------
 
 Rscript analise.R
 
+- Python 3.8+
+
+# API meteorológica (Ir Além)
+
+Rscript clima.R banana- R 4.0+ (opcional)
+
 ```
 
+- Git
+
+#### Fase 2 - ESP32 (Wokwi)
+
+1. Acesse [wokwi.com](https://wokwi.com)### 🤖 Fase 2: IoT e Sistemas Integrados### 🤖 Fase 2: IoT e Sistemas Integrados
+
+2. Carregue `Fase2/Cap 1/config/diagram.json`
+
+3. Cole o código de `FarmTech.ino`### Clone
+
+4. Execute a simulação
 
 
-**Sistema ESP32 (Fase 2)****Funcionalidades:****Funcionalidades:**
 
-- Simular online: [wokwi.com](https://wokwi.com) + carregar `Fase2/Cap 1/config/diagram.json`
+**Como usar**:
 
-- Hardware real: Usar PlatformIO- ⚡ Leitura de sensores em tempo real- ⚡ Leitura de sensores em tempo real
+- Pressione botões NPK (Nitrogênio, Fósforo, Potássio)```bash
+
+- Ajuste LDR (pH) e DHT22 (umidade)
+
+- Observe decisão de irrigação (relé liga/desliga)git clone https://github.com/Cesar-Azeredo/FarmTechSolutions-Completo.git#### Capítulo 1: Sistema IoT com ESP32#### Capítulo 1: Sistema IoT com ESP32
 
 
 
-**Sistema de Gestão (Fase 2)**- 🧠 Decisão automática de irrigação- 🧠 Decisão automática de irrigação
+#### Fase 2 - Sistema de Gestãocd FarmTechSolutions-Completo
 
 ```bash
 
-cd Fase2/Cap\ 6- 📊 Log de dados via Serial Monitor- 📊 Log de dados via Serial Monitor
+cd Fase2/Cap\ 6```
 
 pip install cx_Oracle
 
-python main.py- 🔧 Calibração baseada em dados científicos- 🔧 Calibração baseada em dados científicos (EMBRAPA/IAC)
+python main.py
 
 ```
 
-- 🌐 Suporte para simulação Wokwi- 🌐 Suporte para simulação Wokwi
+### Uso Rápido**Hardware:****Hardware:**
 
 ---
 
@@ -266,41 +430,181 @@ python main.py- 🔧 Calibração baseada em dados científicos- 🔧 Calibraç�
 
 ## ✅ Validação
 
-**Projetos Avançados (ir_alem/):****Projetos Avançados (ir_alem/):**
+**Python App (Fase 1)**- ESP32 microcontroller- ESP32 microcontroller
 
-Execute o teste completo:
-
-- 🐍 API Python para comunicação serial com ESP32- 🐍 API Python para comunicação serial com ESP32
+Execute o teste completo para validar todas as fases:
 
 ```bash
 
-cd testes- 📈 Modelos preditivos em R para otimização- 📈 Modelos preditivos em R para otimização
+```bash
+
+cd testescd Fase1/python_app- Sensores NPK (Nitrogênio, Fósforo, Potássio)- Sensores NPK (Nitrogênio, Fósforo, Potássio)
 
 python teste_completo.py
 
+```python main.py
+
+
+
+**Resultado esperado**:```- Sensor de pH do solo (LDR)- Sensor de pH do solo (LDR)
+
+```
+
+✅ Fase 1 - Python App: PASSOU
+
+✅ Fase 1 - R App: PASSOU
+
+✅ Fase 2 Cap 1 - ESP32 IoT: PASSOU**Análise R (Fase 1)**- DHT22 (temperatura e umidade)- DHT22 (temperatura e umidade)
+
+✅ Fase 2 Cap 6 - Sistema de Gestão: PASSOU
+
+✅ Fase 2 Cap 7 - Análise Estatística: PASSOU```bash
+
+
+
+Total: 5/5 componentes passaram (100.0%)cd Fase1/r_app- Relé para controle de irrigação- Relé para controle de irrigação
+
+```
+
+Rscript analise.R
+
+---
+
+```
+
+## 🛠️ Tecnologias
+
+
+
+### Linguagens
+
+- **Python 3.8+** - Gestão de cultivos, análise, backend**Sistema ESP32 (Fase 2)****Funcionalidades:****Funcionalidades:**
+
+- **R 4.0+** - Estatística, visualizações, API meteorológica
+
+- **C++/Arduino** - Firmware ESP32- Simular online: [wokwi.com](https://wokwi.com) + carregar `Fase2/Cap 1/config/diagram.json`
+
+- **SQL** - Banco de dados Oracle
+
+- Hardware real: Usar PlatformIO- ⚡ Leitura de sensores em tempo real- ⚡ Leitura de sensores em tempo real
+
+### Hardware IoT
+
+- **ESP32** - Microcontrolador
+
+- **Botões (3x)** - Sensores NPK simulados
+
+- **LDR** - Sensor pH simulado**Sistema de Gestão (Fase 2)**- 🧠 Decisão automática de irrigação- 🧠 Decisão automática de irrigação
+
+- **DHT22** - Sensor umidade simulado
+
+- **Relé** - Controle de bomba d'água```bash
+
+
+
+### Ferramentascd Fase2/Cap\ 6- 📊 Log de dados via Serial Monitor- 📊 Log de dados via Serial Monitor
+
+- **Wokwi** - Simulação ESP32 online
+
+- **PlatformIO** - Desenvolvimento ESP32 realpip install cx_Oracle
+
+- **Oracle 19c** - Banco de dados
+
+- **Git** - Controle de versãopython main.py- 🔧 Calibração baseada em dados científicos- 🔧 Calibração baseada em dados científicos (EMBRAPA/IAC)
+
+
+
+---```
+
+
+
+## 📚 Documentação- 🌐 Suporte para simulação Wokwi- 🌐 Suporte para simulação Wokwi
+
+
+
+- 📘 [Guia de Instalação](docs/INSTALL.md)---
+
+- 📗 [Guia de Uso](docs/USAGE.md)
+
+- 📖 [Documentação Completa](docs/README.md)
+
+
+
+---## ✅ Validação
+
+
+
+## 🎓 Especificações do Projeto**Projetos Avançados (ir_alem/):****Projetos Avançados (ir_alem/):**
+
+
+
+Este projeto foi desenvolvido conforme as especificações das disciplinas:Execute o teste completo:
+
+
+
+**Fase 1**: - 🐍 API Python para comunicação serial com ESP32- 🐍 API Python para comunicação serial com ESP32
+
+- Aplicação Python com suporte a 2 culturas
+
+- Cálculo de área plantada (figuras geométricas)```bash
+
+- Cálculo de manejo de insumos
+
+- Menu com entrada/saída/atualização/deleção/saircd testes- 📈 Modelos preditivos em R para otimização- 📈 Modelos preditivos em R para otimização
+
+- Dados organizados em vetores
+
+- Análise estatística em R (média, desvio padrão)python teste_completo.py
+
+- **Ir Além**: API meteorológica em R
+
 ```- 🔗 Integração completa Python + R + ESP32- 🔗 Integração completa Python + R + ESP32
 
+**Fase 2**:
+
+- Sistema ESP32 com sensores NPK (botões), pH (LDR), umidade (DHT22)
+
+- Decisão automática de irrigação (relé)
+
+- Lógica baseada em necessidades da culturaValida automaticamente todas as fases do projeto.
+
+- **Ir Além**: Integração Python + API OpenWeather
+
+- **Ir Além**: Análise estatística em R para decisão de irrigação
 
 
-Valida automaticamente todas as fases do projeto.
+
+------------
 
 
 
----------
+## 📄 Licença
 
 
 
-## 📚 Documentação
+MIT License - Consulte [LICENSE](LICENSE) para detalhes.## 📚 Documentação
 
 
 
-Consulte [`docs/`](docs/) para:#### Capítulo 6: Sistema de Gestão Agrícola#### Capítulo 6: Sistema de Gestão Agrícola
+---
 
-- Guias de instalação detalhados
+
+
+<div align="center">Consulte [`docs/`](docs/) para:#### Capítulo 6: Sistema de Gestão Agrícola#### Capítulo 6: Sistema de Gestão Agrícola
+
+
+
+**🌾 FarmTech Solutions**  - Guias de instalação detalhados
+
+*Agricultura digital para o futuro sustentável*
 
 - Instruções de uso
 
+[GitHub](https://github.com/Cesar-Azeredo/FarmTechSolutions-Completo) • [Documentação](docs/)
+
 - Documentação técnica
+
+</div>
 
 **Stack Tecnológico:****Stack Tecnológico:**
 
