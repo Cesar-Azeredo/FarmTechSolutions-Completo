@@ -1,10 +1,3 @@
-"""
-FarmTech Solutions - Sistema de Gestão Agrícola
-Aplicação Python para análise e gestão de cultivos de banana e milho
-
-Autores: Phellype Massarente, Carlos Costato, Cesar Azeredo
-"""
-
 import csv
 # to work with csv files
 import os

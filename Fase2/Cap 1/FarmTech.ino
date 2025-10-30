@@ -3,28 +3,10 @@
  * FarmTech Solutions - Sistema de Irrigação Inteligente
  * ═══════════════════════════════════════════════════════════════════════════
  * 
- * PROJETO: Sistema IoT para Agricultura de Precisão
- * CULTURAS: Milho e Banana
- * PLATAFORMA: ESP32 (Simulação Wokwi.com)
+ * Sistema IoT para Agricultura de Precisão
+ * Plataforma: ESP32 (Simulação Wokwi.com)
+ * Culturas: Milho e Banana
  * 
- * AUTORES:
- * Phellype Massarente - Full Stack Developer
- * Carlos Costato - Data Scientist
- * Cesar Azeredo - IoT Engineer
- * 
- * COMPONENTES:
- * - 3 Botões Verdes: Simulam sensores NPK (Nitrogênio, Fósforo, Potássio)
- * - LDR: Simula sensor de pH do solo (0-14)
- * - DHT22: Sensor de temperatura e umidade (simulando umidade do solo)
- * - Relé Azul: Controla bomba d'água para irrigação
- * 
- * LÓGICA DE DECISÃO:
- * - Analisa níveis de NPK e pH
- * - Monitora umidade do solo (DHT22)
- * - Liga/desliga irrigação automaticamente
- * - Baseado em dados científicos (EMBRAPA, IAC)
- * 
- * DATA: Outubro 2025
  * ═══════════════════════════════════════════════════════════════════════════
  */
 

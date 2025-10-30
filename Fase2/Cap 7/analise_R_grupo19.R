@@ -1,15 +1,5 @@
-# ============================================================================
 # FarmTech Solutions - Análise Estatística do Agronegócio Brasileiro
-# 
-# Autores:
-#   - Phellype Massarente
-#   - Carlos Costato
-#   - Cesar Azeredo
-# 
-# Data: Outubro 2025
-# 
 # Dados: Produção de Banana e Milho por Região (Fonte: CONAB/IBGE 2024)
-# ============================================================================
 
 # ============================================================================
 # 1. CONFIGURAÇÃO INICIAL E CARREGAMENTO DE DADOS

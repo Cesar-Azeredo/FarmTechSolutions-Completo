@@ -1,10 +1,3 @@
-# ============================================================================
-# FarmTech Solutions - Análise Estatística de Dados Agrícolas
-# Script R para análise de dados de banana e milho
-#
-# Autores: Phellype Massarente, Carlos Costato, Cesar Azeredo
-# ============================================================================
-
 library(readr)
 
 # Script R para análise estatística dos dados exportados do Python

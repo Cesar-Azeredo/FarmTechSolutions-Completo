@@ -1,11 +1,3 @@
-"""
-FarmTech Solutions - Sistema de Gestão Agrícola
-Aplicação Principal com Menu Interativo
-
-Autores: Phellype Massarente, Carlos Costato, Cesar Azeredo
-Data: Outubro 2025
-"""
-
 import json
 import os
 from datetime import datetime

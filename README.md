@@ -24,22 +24,7 @@ O sistema monitora **níveis de NPK, pH do solo e umidade** em tempo real, toman
 
 ## 👥 Autores
 
-<table>
-  <tr>
-    <td align="center">
-      <strong>Phellype Massarente</strong><br>
-      <sub>Full Stack Developer</sub>
-    </td>
-    <td align="center">
-      <strong>Carlos Costato</strong><br>
-      <sub>Data Scientist</sub>
-    </td>
-    <td align="center">
-      <strong>Cesar Azeredo</strong><br>
-      <sub>IoT Engineer</sub>
-    </td>
-  </tr>
-</table>
+**Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**
 
 ---
 

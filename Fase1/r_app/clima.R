@@ -1,10 +1,3 @@
-# ============================================================================
-# FarmTech Solutions - Análise Climática
-# Script R para análise de dados climáticos
-#
-# Autores: Phellype Massarente, Carlos Costato, Cesar Azeredo
-# ============================================================================
-
 # Script R para coletar e exibir dados meteorológicos de uma API pública
 # Exemplo usando a API Open-Meteo (https://open-meteo.com/)
 

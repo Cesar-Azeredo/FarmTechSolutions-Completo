@@ -1,5 +1,0 @@
-# Requerimentos do projeto FarmTechSolutions (R)
-# Pacotes necessários para scripts em r_app/
-readr
-ggplot2
-httr
