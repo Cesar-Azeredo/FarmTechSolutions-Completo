@@ -1,9 +1,9 @@
-#grupo 59 FIAP
-#rm566826 - Phellype Matheus Giacoia Flaibam Massarente
-#rm567659 - Maria Luísa Rodrigues Nascimento
-#rm567005 - Carlos Alberto Florindo Costato
-#rm568140 - Cesar Martinho de Azeredo
-#rm568457 - Guilherme Paes Barreto Didier Garcia
+# ============================================================================
+# FarmTech Solutions - Análise Climática
+# Script R para análise de dados climáticos
+#
+# Autores: Phellype Massarente, Carlos Costato, Cesar Azeredo
+# ============================================================================
 
 # Script R para coletar e exibir dados meteorológicos de uma API pública
 # Exemplo usando a API Open-Meteo (https://open-meteo.com/)

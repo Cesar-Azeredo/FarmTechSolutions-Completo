@@ -1,9 +1,9 @@
-#grupo 59 FIAP
-#rm566826 - Phellype Matheus Giacoia Flaibam Massarente
-#rm567659 - Maria Luísa Rodrigues Nascimento
-#rm567005 - Carlos Alberto Florindo Costato
-#rm568140 - Cesar Martinho de Azeredo
-#rm568457 - Guilherme Paes Barreto Didier Garcia
+# ============================================================================
+# FarmTech Solutions - Análise Estatística de Dados Agrícolas
+# Script R para análise de dados de banana e milho
+#
+# Autores: Phellype Massarente, Carlos Costato, Cesar Azeredo
+# ============================================================================
 
 library(readr)
 

@@ -1,14 +1,12 @@
 # ============================================================================
-# GRUPO 19 FIAP - 1º ano • 2025/2
-# Projeto: FarmTech Solutions - Análise Estatística do Agronegócio Brasileiro
+# FarmTech Solutions - Análise Estatística do Agronegócio Brasileiro
 # 
-# Integrantes:
-#   - RM566826: Phellype Matheus Giacoia Flaibam Massarente
-#   - RM567005: Carlos Alberto Florindo Costato
-#   - RM568140: Cesar Martinho de Azeredo
+# Autores:
+#   - Phellype Massarente
+#   - Carlos Costato
+#   - Cesar Azeredo
 # 
-# Período: 18/09/2025 a 15/10/2025
-# Data: 12/10/2025
+# Data: Outubro 2025
 # 
 # Dados: Produção de Banana e Milho por Região (Fonte: CONAB/IBGE 2024)
 # ============================================================================
@@ -21,9 +19,9 @@
 rm(list = ls())
 
 # Definir diretório de trabalho (ajuste conforme necessário)
-# setwd("C:/Fiap Projeto/Fase2/cursotiaor/pbl/Fase2/Cap 7")
+# setwd("C:/path/to/FarmTechSolutions/Fase2/Cap 7")
 
-# Carregar dados - Grupo 19 (RM566826, RM567005, RM568140)
+# Carregar dados
 dados <- read.csv("dados_agronegocio_grupo19.csv", 
                   header = TRUE, 
                   sep = ",",
@@ -435,8 +433,8 @@ cat("• Monitoramento de NPK crítico para regiões Sul e Centro-Oeste\n")
 cat("\n\n")
 cat("############################################################\n")
 cat("##  ANÁLISE ESTATÍSTICA CONCLUÍDA COM SUCESSO!          ##\n")
-cat("##  FarmTech Solutions - Grupo 59 FIAP                  ##\n")
-cat("##  Data: 12/10/2025                                    ##\n")
+cat("##  FarmTech Solutions Team                             ##\n")
+cat("##  Data: Outubro 2025                                  ##\n")
 cat("############################################################\n")
 
 # Resetar configurações gráficas

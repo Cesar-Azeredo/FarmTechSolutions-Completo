@@ -3,15 +3,14 @@
  * FarmTech Solutions - Sistema de Irrigação Inteligente
  * ═══════════════════════════════════════════════════════════════════════════
  * 
- * PROJETO: Fase 2 - Coleta de Dados e Irrigação Automatizada
+ * PROJETO: Sistema IoT para Agricultura de Precisão
  * CULTURAS: Milho e Banana
  * PLATAFORMA: ESP32 (Simulação Wokwi.com)
  * 
- * IDENTIFICAÇÃO DO GRUPO:
- * Grupo 19 FIAP - 1 ano • 2025/2 - Fase 2 - de 18/09/2025 a 15/10/2025
- * RM566826 - Phellype Matheus Giacoia Flaibam Massarente
- * RM567005 - Carlos Alberto Florindo Costato
- * RM568140 - Cesar Martinho de Azeredo
+ * AUTORES:
+ * Phellype Massarente - Full Stack Developer
+ * Carlos Costato - Data Scientist
+ * Cesar Azeredo - IoT Engineer
  * 
  * COMPONENTES:
  * - 3 Botões Verdes: Simulam sensores NPK (Nitrogênio, Fósforo, Potássio)
@@ -840,11 +839,11 @@ void exibirBanner() {
   Serial.println("═══════════════════════════════════════════════════════════════");
   Serial.println("  🚜 FARMTECH SOLUTIONS - SISTEMA DE IRRIGAÇÃO INTELIGENTE");
   Serial.println("═══════════════════════════════════════════════════════════════");
-  Serial.println("  📡 Fase 2: Coleta de Dados e Automação");
+  Serial.println("  📡 Sistema IoT de Agricultura de Precisão");
   Serial.println("  🌾 Culturas: Milho e Banana");
   Serial.println("  📊 Sensores: NPK, pH (LDR), Umidade (DHT22), Relé");
   Serial.println("═══════════════════════════════════════════════════════════════");
-  Serial.println("  👥 Grupo 59 FIAP - Outubro 2025");
+  Serial.println("  👥 FarmTech Solutions Team - 2025");
   Serial.println("═══════════════════════════════════════════════════════════════");
   Serial.println();
 }

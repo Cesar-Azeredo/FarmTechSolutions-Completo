@@ -2,19 +2,19 @@
 FarmTech Solutions - Sistema de Gestão Agrícola
 Aplicação Principal com Menu Interativo
 
-Autores: Grupo 59 - FIAP Fase 2
+Autores: Phellype Massarente, Carlos Costato, Cesar Azeredo
 Data: Outubro 2025
 """
 
 import json
 import os
 from datetime import datetime
-from cultivo_manager import CultivoManager
-from sensor_monitor import SensorMonitor
-from irrigacao_controller import IrrigacaoController
-from estoque_manager import EstoqueManager
-from database import DatabaseOracle
-from file_utils import FileUtils
+from modules.cultivo_manager import CultivoManager
+from modules.sensor_monitor import SensorMonitor
+from modules.irrigacao_controller import IrrigacaoController
+from modules.estoque_manager import EstoqueManager
+from modules.database import DatabaseOracle
+from modules.file_utils import FileUtils
 
 
 class FarmTechApp:
