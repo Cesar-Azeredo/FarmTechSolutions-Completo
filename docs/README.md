@@ -2,7 +2,7 @@
 
 ## 📖 Sobre
 
-Este diretório contém a documentação técnica completa do projeto FarmTech Solutions, abrangendo todas as 3 fases de desenvolvimento.
+Este diretório contém a documentação técnica completa do projeto FarmTech Solutions, abrangendo todas as 3 fases de desenvolvimento (Gestão de Cultivos, IoT/ESP32 e Dashboard Oracle/Streamlit).
 
 ---
 
@@ -10,9 +10,8 @@ Este diretório contém a documentação técnica completa do projeto FarmTech S
 
 ```
 docs/
-├── INSTALL.md          # Guia de instalação completo
-├── USAGE.md            # Guia de uso do sistema
-├── FASE3.md            # Documentação específica da Fase 3 (Dashboard Oracle)
+├── INSTALL.md          # Guia de instalação completo (Fases 1, 2 e 3)
+├── USAGE.md            # Guia de uso do sistema (Fases 1, 2 e 3)
 └── .gitignore          # Configuração global do Git
 ```
 
@@ -21,13 +20,10 @@ docs/
 ## 🚀 Links Rápidos
 
 ### Instalação
-- [Guia de Instalação Completo](INSTALL.md)
+- [Guia de Instalação Completo](INSTALL.md) - Inclui instalação do Dashboard Oracle (Fase 3)
 
 ### Uso
-- [Como Usar o Sistema](USAGE.md)
-
-### Fase 3 - Dashboard Oracle/Streamlit
-- [Documentação Completa da Fase 3](FASE3.md)
+- [Como Usar o Sistema](USAGE.md) - Inclui instruções do Dashboard Streamlit (Fase 3)
 
 ---
 

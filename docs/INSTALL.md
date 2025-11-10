@@ -110,6 +110,53 @@ Rscript analise_R_grupo19.R
 
 ---
 
+## 📊 Fase 3 - Dashboard Oracle/Streamlit
+
+### Instalação de Dependências
+
+```powershell
+cd Fase3
+pip install -r requirements.txt
+```
+
+**Dependências incluídas:**
+- `streamlit` - Framework de dashboard
+- `oracledb` - Driver Oracle (não requer Instant Client)
+- `pandas` - Manipulação de dados
+- `plotly` - Visualizações interativas
+- `python-dotenv` - Gerenciamento de variáveis de ambiente
+
+### Configuração Oracle
+
+**Opção 1: Variáveis de Ambiente (Recomendado)**
+
+```powershell
+# Temporário (sessão atual)
+$env:ORACLE_USER="RM566826"
+$env:ORACLE_PASSWORD="161083"
+
+# Persistente (todas as sessões)
+setx ORACLE_USER "RM566826"
+setx ORACLE_PASSWORD "161083"
+```
+
+**Opção 2: Editar arquivo de configuração**
+
+Edite `scripts/dashboard.py` e atualize as credenciais (não recomendado para produção).
+
+### Teste de Conexão
+
+```powershell
+python scripts\test_connection.py
+```
+
+**Saída esperada:**
+- ✅ Conexão estabelecida
+- ✅ Tabela SENSORES encontrada
+- ✅ Contagem de registros
+
+---
+
 ## ✅ Verificação da Instalação
 
 ### Checklist
@@ -119,6 +166,8 @@ Rscript analise_R_grupo19.R
 - [ ] ESP32 compila/simula
 - [ ] Sistema de gestão inicia
 - [ ] Análise R gera gráficos
+- [ ] Dashboard Streamlit conecta ao Oracle
+- [ ] Visualizações aparecem corretamente
 
 ---
 
@@ -138,6 +187,13 @@ Rscript analise_R_grupo19.R
 
 - Verifique drivers USB
 - Configure a porta serial correta no PlatformIO
+
+### Oracle/Streamlit (Fase 3)
+
+- **Erro de conexão:** Verifique credenciais (RM e data de nascimento DDMMAA)
+- **Erro DPI-1047:** Certifique-se de usar `oracledb` (não `cx_Oracle`)
+- **Dashboard não abre:** Verifique se a porta 8501 está disponível
+- **Dados não aparecem:** Execute `test_connection.py` para validar tabela SENSORES
 
 ---
 

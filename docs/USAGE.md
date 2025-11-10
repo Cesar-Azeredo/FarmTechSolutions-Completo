@@ -107,7 +107,104 @@ Rscript analise_R_grupo19.R
 
 ---
 
-## 💡 Dicas de Uso
+## � Fase 3: Dashboard Oracle/Streamlit
+
+### Executar Dashboard
+
+**Iniciar:**
+```powershell
+cd Fase3
+streamlit run scripts\dashboard.py
+```
+
+**Acesso:**
+- URL: `http://localhost:8501`
+- Abre automaticamente no navegador padrão
+
+---
+
+### Funcionalidades do Dashboard
+
+#### 1️⃣ **Métricas em Tempo Real**
+- Temperatura ambiente
+- Umidade do solo
+- pH do solo
+- Pressão atmosférica
+- Níveis de NPK (Nitrogênio, Fósforo, Potássio)
+
+#### 2️⃣ **Visualizações Interativas**
+- Gráficos de linha (evolução temporal)
+- Indicadores de status (irrigação ON/OFF)
+- Distribuição de dados
+- Correlações entre variáveis
+
+#### 3️⃣ **Sugestões Inteligentes**
+O sistema analisa condições e sugere:
+- **Irrigação** quando umidade < 40%
+- **Verificação** quando temperatura > 30°C
+- **Fertilização** quando NPK baixo
+- **Correção de pH** quando fora do ideal (6.0-7.0)
+
+#### 4️⃣ **Filtros e Controles**
+- Selecionar período de análise
+- Filtrar por cultura (Banana, Milho, etc.)
+- Ajustar escala de gráficos
+
+---
+
+### Scripts Auxiliares
+
+#### Teste de Conexão
+```powershell
+python scripts\test_connection.py
+```
+**Valida:**
+- Conexão com Oracle
+- Existência da tabela SENSORES
+- Estrutura de colunas
+
+#### Verificação de Normalização
+```powershell
+python scripts\check_normalization.py
+```
+**Exibe:**
+- Medianas antes/depois da normalização
+- Ajustes de escala aplicados
+- Última leitura normalizada
+
+#### Exportar Evidências
+```powershell
+python scripts\export_evidence.py
+```
+**Gera:**
+- CSV com amostra de dados
+- Relatório de validação
+
+---
+
+### Estrutura de Dados (Tabela SENSORES)
+
+| Coluna | Descrição | Tipo |
+|--------|-----------|------|
+| `DATA` | Data da leitura | DATE |
+| `HORA` | Hora da leitura | NUMBER |
+| `TEMPERATURA` | Temperatura (°C) | NUMBER |
+| `UMIDADE_SOLO` | Umidade do solo (%) | NUMBER |
+| `PH_SOLO` | pH do solo | NUMBER |
+| `PRECIPITACAO` | Precipitação (mm) | VARCHAR2 |
+| `UMIDADE_AR` | Umidade do ar (%) | NUMBER |
+| `VENTO_KMH` | Velocidade do vento | VARCHAR2 |
+| `PRESSAO_ATMOSFERICA` | Pressão (hPa) | NUMBER |
+| `NITROGENIO_OK` | Status N (TRUE/FALSE) | VARCHAR2 |
+| `FOSFORO_OK` | Status P (TRUE/FALSE) | VARCHAR2 |
+| `POTASSIO_OK` | Status K (TRUE/FALSE) | VARCHAR2 |
+| `IRRIGACAO_REALIZADA` | Status irrigação | VARCHAR2 |
+| `CULTURA` | Tipo de cultura | VARCHAR2 |
+| `PRODUTIVIDADE` | Produtividade (%) | NUMBER |
+
+---
+
+## �💡 Dicas de Uso
 
 ### Python
 - Use 'X' para navegar entre menus
@@ -123,6 +220,12 @@ Rscript analise_R_grupo19.R
 - Ajuste limites de sensores conforme necessário
 - Serial Monitor mostra decisões em tempo real
 - Simule eventos pressionando botões
+
+### Dashboard (Fase 3)
+- Recarregue a página para atualizar dados
+- Use filtros para focar em períodos específicos
+- Consulte métricas em tempo real na barra lateral
+- Exporte dados para análise offline
 
 ---
 
@@ -154,6 +257,16 @@ Rscript analise_R_grupo19.R
 ### "Erro de sintaxe"
 - Verifique versão Python/R
 - Confira encoding de arquivos (UTF-8)
+
+### "Erro de conexão Oracle" (Fase 3)
+- Verifique variáveis de ambiente (`ORACLE_USER`, `ORACLE_PASSWORD`)
+- Confirme formato da senha: DDMMAA (6 dígitos)
+- Teste conectividade: `Test-NetConnection oracle.fiap.com.br -Port 1521`
+
+### "Tabela SENSORES não encontrada"
+- Execute importação de dados no Oracle SQL Developer
+- Verifique nome da tabela (deve ser `SENSORES`)
+- Execute `test_connection.py` para validar
 
 ---
 
