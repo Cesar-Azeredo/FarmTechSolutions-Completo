@@ -48,6 +48,31 @@ DATA_PATH = Path(__file__).parent.parent / "Oracle" / "data" / "demo_dados_r.csv
 # Carregar dataset
 df = pd.read_csv(DATA_PATH)
 print(f"✅ Dataset carregado: {df.shape[0]} registros, {df.shape[1]} colunas")
+
+# IMPORTANTE: Dataset original só tem Banana - vamos criar dados sintéticos de Milho
+# baseado nas diferenças conhecidas entre as culturas
+print("⚠️  Dataset original contém apenas Banana")
+print("📊 Criando dados sintéticos de Milho para análise comparativa...")
+
+# Criar cópia para Milho com ajustes baseados em características reais
+df_milho = df.copy()
+df_milho['cultura'] = 'Milho'
+
+# Ajustar características do Milho (baseado em literatura agronômica):
+# Milho prefere temperaturas mais altas
+df_milho['temperatura'] = df_milho['temperatura'] + np.random.uniform(2, 5, len(df_milho))
+# Milho tolera menos umidade no solo
+df_milho['umidade_solo'] = df_milho['umidade_solo'] - np.random.uniform(5, 15, len(df_milho))
+# Milho prefere pH mais neutro
+df_milho['ph_solo'] = df_milho['ph_solo'] + np.random.uniform(-0.2, 0.3, len(df_milho))
+# Milho requer mais NPK
+df_milho['nitrogenio_ok'] = np.random.choice([True, False], len(df_milho), p=[0.7, 0.3])
+df_milho['fosforo_ok'] = np.random.choice([True, False], len(df_milho), p=[0.8, 0.2])
+df_milho['potassio_ok'] = np.random.choice([True, False], len(df_milho), p=[0.7, 0.3])
+
+# Combinar datasets
+df = pd.concat([df, df_milho], ignore_index=True)
+print(f"✅ Dataset expandido: {df.shape[0]} registros (120 Banana + 120 Milho)")
 print()
 
 # Exibir primeiras linhas
