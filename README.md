@@ -12,9 +12,10 @@
 
 FarmTech Solutions é uma startup voltada à **agricultura digital**, que une tecnologia, inovação e sustentabilidade para otimizar os processos de cultivo e gestão agrícola.  
 
-O sistema é dividido em **duas fases principais**:  
+O sistema é dividido em **três fases principais**:  
 - 🌱 **Fase 1:** Gestão de cultivos e análise de dados agrícolas.  
 - 🤖 **Fase 2:** Desenvolvimento de um sistema de **irrigação inteligente com IoT (ESP32)** e integração com banco de dados Oracle, análise estatística e simulação de dados reais.
+- 📊 **Fase 3:** Dashboard interativo com integração Oracle Database para visualização de dados agrícolas em tempo real.
 
 O objetivo é demonstrar o potencial da agricultura de precisão e do uso de IoT, IA e análise de dados para aprimorar a produtividade e eficiência no agronegócio.
 
@@ -149,14 +150,61 @@ Com base nessas análises, a equipe da FarmTech Solutions busca:
 
 ---
 
+### 📊 Fase 3 – Dashboard e Integração Oracle
+
+#### 📘 Introdução
+
+A **Fase 3** completa o ciclo de digitalização agrícola com a implementação de um **dashboard interativo** desenvolvido em **Python/Streamlit** integrado ao banco de dados **Oracle Database**.
+
+#### 🎯 Funcionalidades
+
+- **Dashboard em tempo real** com visualizações de:
+  - Níveis de umidade do solo, pH, nutrientes (N, P, K)
+  - Dados climáticos (temperatura, umidade do ar, precipitação, vento, pressão)
+  - Status de irrigação e produtividade
+- **Integração com Oracle Database** através do driver `oracledb`
+- **Normalização automática de dados** para ajuste de escalas
+- **Sugestões de irrigação** baseadas em condições climáticas e do solo
+- **Gráficos interativos** com Plotly
+- **Scripts de validação e exportação** de dados
+
+#### 📁 Estrutura
+
+```
+Fase3/
+├── data/                    # Dados CSV para testes
+├── docs/                    # Documentação técnica
+├── scripts/                 # Scripts Python
+│   ├── dashboard.py         # Dashboard Streamlit principal
+│   ├── test_connection.py   # Teste de conexão Oracle
+│   ├── check_normalization.py
+│   ├── data_load_test.py
+│   └── export_evidence.py
+├── sql/                     # Scripts SQL
+├── requirements.txt         # Dependências Python
+└── start_dashboard.bat      # Inicializador Windows
+```
+
+#### 🚀 Como Executar
+
+```powershell
+cd Fase3
+pip install -r requirements.txt
+streamlit run scripts/dashboard.py
+```
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python 3.8+**  Gestão de cultivos, análise e backend  
-- **R 4.0+**  Análise estatística e visualizações  
-- **C++/Arduino**  Firmware ESP32  
-- **Oracle Database 19c**  Banco de dados  
-- **ESP32**  Microcontrolador IoT  
-- **Wokwi**  Simulação de hardware  
+- **Python 3.8+** → Gestão de cultivos, análise e backend  
+- **R 4.0+** → Análise estatística e visualizações  
+- **C++/Arduino** → Firmware ESP32  
+- **Oracle Database 19c** → Banco de dados  
+- **Streamlit** → Dashboard interativo (Fase 3)
+- **Plotly** → Visualizações de dados (Fase 3)
+- **ESP32** → Microcontrolador IoT  
+- **Wokwi** → Simulação de hardware  
 
 ---
 
@@ -191,6 +239,13 @@ Rscript clima.R banana
 ```powershell
 cd Fase2\SistemaGestaoAgricola
 python main.py
+```
+
+### 📊 Fase 3 - Dashboard Oracle/Streamlit
+```powershell
+cd Fase3
+pip install -r requirements.txt
+streamlit run scripts\dashboard.py
 ```
 
 ---
