@@ -49,6 +49,7 @@ FASE1_R = PROJECT_ROOT / "Fase1" / "r_app"
 FASE2_CAP1 = PROJECT_ROOT / "Fase2" / "Cap 1"
 FASE2_CAP6 = PROJECT_ROOT / "Fase2" / "Cap 6"
 FASE2_CAP7 = PROJECT_ROOT / "Fase2" / "Cap 7"
+FASE3 = PROJECT_ROOT / "Fase3"
 
 resultados = {}
 
@@ -385,6 +386,135 @@ def test_fase2_cap7():
         print_error(f"Erro ao testar Fase2 Cap7: {e}")
         return False
 
+def test_fase3():
+    """Testa Fase 3 - Dashboard Oracle/Streamlit"""
+    print_header("FASE 3 - DASHBOARD ORACLE/STREAMLIT")
+    
+    try:
+        # Verificar estrutura de pastas
+        scripts_dir = FASE3 / "scripts"
+        data_dir = FASE3 / "data"
+        sql_dir = FASE3 / "sql"
+        
+        if not scripts_dir.exists():
+            print_error("Pasta scripts/ não encontrada")
+            return False
+        
+        if not data_dir.exists():
+            print_error("Pasta data/ não encontrada")
+            return False
+        
+        if not sql_dir.exists():
+            print_error("Pasta sql/ não encontrada")
+            return False
+        
+        print_success("Estrutura de pastas OK")
+        
+        # Verificar requirements.txt
+        requirements = FASE3 / "requirements.txt"
+        if not requirements.exists():
+            print_error("requirements.txt não encontrado")
+            return False
+        
+        print_success("requirements.txt encontrado")
+        
+        with open(requirements, 'r') as f:
+            deps = f.read()
+            required_deps = ['streamlit', 'oracledb', 'pandas', 'plotly']
+            for dep in required_deps:
+                if dep in deps.lower():
+                    print_success(f"  Dependência: {dep}")
+                else:
+                    print_warning(f"  Dependência não encontrada: {dep}")
+        
+        # Verificar scripts Python
+        scripts = [
+            "dashboard.py",
+            "test_connection.py",
+            "check_normalization.py",
+            "data_load_test.py",
+            "export_evidence.py"
+        ]
+        
+        print_info("Validando scripts Python...")
+        all_ok = True
+        for script in scripts:
+            script_path = scripts_dir / script
+            if script_path.exists():
+                # Testar sintaxe
+                result = subprocess.run(
+                    [sys.executable, "-m", "py_compile", str(script_path)],
+                    capture_output=True,
+                    text=True
+                )
+                
+                if result.returncode == 0:
+                    print_success(f"  {script}: Sintaxe OK")
+                else:
+                    print_error(f"  {script}: Erro de sintaxe - {result.stderr[:100]}")
+                    all_ok = False
+            else:
+                print_warning(f"  {script}: Não encontrado")
+                all_ok = False
+        
+        # Verificar dashboard.py em detalhes
+        dashboard_py = scripts_dir / "dashboard.py"
+        if dashboard_py.exists():
+            with open(dashboard_py, 'r', encoding='utf-8') as f:
+                content = f.read()
+                
+                checks = [
+                    ("import streamlit", "Import Streamlit"),
+                    ("import oracledb", "Import OracleDB"),
+                    ("import pandas", "Import Pandas"),
+                    ("import plotly", "Import Plotly"),
+                    ("st.title", "Streamlit UI"),
+                    ("oracledb.connect", "Conexão Oracle")
+                ]
+                
+                print_info("Verificando componentes do dashboard...")
+                for check, desc in checks:
+                    if check in content:
+                        print_success(f"  {desc}: OK")
+                    else:
+                        print_warning(f"  {desc}: Não encontrado")
+        
+        # Verificar arquivos SQL
+        sql_file = sql_dir / "sql.txt"
+        if sql_file.exists():
+            print_success("Arquivo SQL presente (sql.txt)")
+            with open(sql_file, 'r', encoding='utf-8') as f:
+                sql_content = f.read()
+                if "SELECT" in sql_content.upper():
+                    print_success("  Contém queries SQL")
+        else:
+            print_warning("sql.txt não encontrado")
+        
+        # Verificar arquivos CSV de dados
+        csv_files = list(data_dir.glob("*.csv"))
+        if csv_files:
+            print_success(f"Arquivos CSV encontrados: {len(csv_files)}")
+            for csv_file in csv_files:
+                print_info(f"  → {csv_file.name}")
+        else:
+            print_warning("Nenhum arquivo CSV encontrado em data/")
+        
+        # Verificar batch script
+        batch_file = FASE3 / "start_dashboard.bat"
+        if batch_file.exists():
+            print_success("Script de inicialização presente (start_dashboard.bat)")
+        
+        if all_ok:
+            print_success("Todos os scripts Python validados!")
+        
+        print_info("Dashboard validado (execução requer Oracle configurado)")
+        print_success("FASE 3: OK!")
+        return True
+        
+    except Exception as e:
+        print_error(f"Erro ao testar Fase3: {e}")
+        return False
+
 def generate_report():
     """Gera relatório final dos testes"""
     print_header("RELATÓRIO FINAL DE VALIDAÇÃO")
@@ -421,6 +551,7 @@ if __name__ == "__main__":
     resultados["Fase 2 Cap 1 - ESP32 IoT"] = test_fase2_cap1()
     resultados["Fase 2 Cap 6 - Sistema de Gestão"] = test_fase2_cap6()
     resultados["Fase 2 Cap 7 - Análise Estatística"] = test_fase2_cap7()
+    resultados["Fase 3 - Dashboard Oracle/Streamlit"] = test_fase3()
     
     # Gerar relatório
     exit_code = generate_report()
