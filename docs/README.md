@@ -2,7 +2,7 @@
 
 ## 📖 Sobre
 
-Este diretório contém a documentação técnica do projeto FarmTech Solutions.
+Este diretório contém a documentação técnica completa do projeto FarmTech Solutions, abrangendo todas as 3 fases de desenvolvimento.
 
 ---
 
@@ -12,7 +12,8 @@ Este diretório contém a documentação técnica do projeto FarmTech Solutions.
 docs/
 ├── INSTALL.md          # Guia de instalação completo
 ├── USAGE.md            # Guia de uso do sistema
-└── API.md              # Documentação de APIs (se aplicável)
+├── FASE3.md            # Documentação específica da Fase 3 (Dashboard Oracle)
+└── .gitignore          # Configuração global do Git
 ```
 
 ---
@@ -25,11 +26,14 @@ docs/
 ### Uso
 - [Como Usar o Sistema](USAGE.md)
 
-### APIs
-- [Documentação de APIs](API.md)
+### Fase 3 - Dashboard Oracle/Streamlit
+- [Documentação Completa da Fase 3](FASE3.md)
 
 ---
 
 ## 📞 Suporte
 
 Para dúvidas ou problemas, consulte o [README principal](../README.md).
+
+**Equipe FarmTech Solutions**  
+Phellype Massarente • Carlos Costato • Cesar Azeredo
