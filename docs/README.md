@@ -39,6 +39,18 @@ O objetivo é demonstrar o potencial da agricultura de precisão através do uso
 
 ---
 
+<!-- 
+## 📸 Demonstração
+
+> 💡 **Dica:** Adicione screenshots do dashboard, simulação Wokwi e análises de ML aqui para melhor visualização do projeto.
+
+![Dashboard](docs/screenshots/dashboard.png)
+![Wokwi Simulation](docs/screenshots/wokwi.png)
+![ML Analysis](docs/screenshots/ml_analysis.png)
+-->
+
+---
+
 ## 📂 Estrutura do Projeto
 
 ### 🌱 Fase 1 – Gestão de Cultivos e Análise de Dados
@@ -396,10 +408,18 @@ A documentação técnica completa está disponível na pasta `docs/`:
 
 ## 👥 Autores
 
-Phellype Massarente • Carlos Costato • Cesar Azeredo
+**Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**
 
 ---
 
 ## 📄 Licença
 
-[MIT](LICENSE)
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+---
+
+## 🎓 Sobre Este Projeto
+
+Este projeto foi desenvolvido como parte do programa acadêmico de **Engenharia de Software e Ciência de Dados**, demonstrando a aplicação prática de tecnologias modernas (IoT, Machine Learning, Cloud Database) no contexto do agronegócio brasileiro. O objetivo é evidenciar como a integração entre sensoriamento, análise de dados e automação pode transformar a agricultura tradicional em um modelo digital, sustentável e baseado em decisões orientadas por dados.
+
+**FarmTech Solutions** representa a convergência entre inovação tecnológica e agricultura de precisão. 🌾🚀

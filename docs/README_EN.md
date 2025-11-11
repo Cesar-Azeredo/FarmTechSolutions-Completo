@@ -39,6 +39,18 @@ The goal is to demonstrate the potential of precision agriculture through IoT, A
 
 ---
 
+<!-- 
+## 📸 Demonstration
+
+> 💡 **Tip:** Add screenshots of the dashboard, Wokwi simulation, and ML analyses here for better project visualization.
+
+![Dashboard](docs/screenshots/dashboard.png)
+![Wokwi Simulation](docs/screenshots/wokwi.png)
+![ML Analysis](docs/screenshots/ml_analysis.png)
+-->
+
+---
+
 ## 📂 Project Structure
 
 ### 🌱 Phase 1 – Crop Management and Data Analysis
@@ -396,10 +408,18 @@ Complete technical documentation is available in the `docs/` folder:
 
 ## 👥 Authors
 
-Phellype Massarente • Carlos Costato • Cesar Azeredo
+**Phellype Massarente** • **Carlos Costato** • **Cesar Azeredo**
 
 ---
 
 ## 📄 License
 
-[MIT](LICENSE)
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🎓 About This Project
+
+This project was developed as part of the **Software Engineering and Data Science** academic program, demonstrating the practical application of modern technologies (IoT, Machine Learning, Cloud Database) in the context of Brazilian agribusiness. The goal is to showcase how the integration of sensing, data analysis, and automation can transform traditional agriculture into a digital, sustainable, and data-driven model.
+
+**FarmTech Solutions** represents the convergence of technological innovation and precision agriculture. 🌾🚀
