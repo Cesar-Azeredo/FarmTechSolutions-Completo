@@ -1,4 +1,5 @@
 # 🌾 FarmTech Solutions
+
 **Intelligent Agriculture System with IoT, Python, R, and Oracle**
 
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
@@ -13,11 +14,28 @@
 FarmTech Solutions is a startup focused on **digital agriculture**, combining technology, innovation, and sustainability to optimize crop cultivation and agricultural management processes.
 
 The system is divided into **three main phases**:
-- 🌱 **Phase 1:** Crop management and agricultural data analysis.
-- 🤖 **Phase 2:** Development of a **smart irrigation system with IoT (ESP32)** and integration with Oracle database, statistical analysis, and real data simulation.
-- 📊 **Phase 3:** Interactive dashboard with Oracle Database integration for real-time agricultural data visualization.
 
-The goal is to demonstrate the potential of precision agriculture and the use of IoT, AI, and data analysis to improve productivity and efficiency in agribusiness.
+- 🌱 **Phase 1:** Crop management and agricultural data analysis
+- 🤖 **Phase 2:** Smart irrigation system with IoT (ESP32), Oracle Database integration, and statistical analysis
+- 📊 **Phase 3:** Interactive dashboard and Machine Learning models for crop prediction
+
+The goal is to demonstrate the potential of precision agriculture through IoT, AI, and data analysis to improve productivity and efficiency in agribusiness.
+
+---
+
+## 📑 Table of Contents
+
+- [About the Project](#-about-the-project)
+- [Project Structure](#-project-structure)
+  - [Phase 1 – Crop Management and Data Analysis](#-phase-1--crop-management-and-data-analysis)
+  - [Phase 2 – IoT and Integrated Systems](#-phase-2--iot-and-integrated-systems)
+  - [Phase 3 – Dashboard, Machine Learning, and Oracle Integration](#-phase-3--dashboard-machine-learning-and-oracle-integration)
+- [Technologies Used](#️-technologies-used)
+- [How to Run](#-how-to-run)
+- [Validation and Testing](#-validation-and-testing)
+- [Documentation](#-documentation)
+- [Authors](#-authors)
+- [License](#-license)
 
 ---
 
@@ -27,31 +45,32 @@ The goal is to demonstrate the potential of precision agriculture and the use of
 
 #### 📘 Introduction
 
-In this first phase, the **FarmTech Solutions** team began developing an application in **Python** to support a farm transitioning to **Digital Agriculture**, aiming to increase productivity and input control.
+In this first phase, the **FarmTech Solutions** team developed an application in **Python** to support farms transitioning to **Digital Agriculture**, aiming to increase productivity and input control.
 
 #### 🧩 Main Features
 
-- **Support for 2 types of agricultural crops** chosen by the team.
-- **Planting area calculation**, allowing different geometric shapes (rectangle, trapezoid, circle, etc.).
-- **Input management calculation**, such as fertilizers, herbicides, and insecticides, considering area and applied quantity.
-- **Data structures with vectors** to store and manipulate crop information.
+- **Support for 2 types of agricultural crops** chosen by the team
+- **Planting area calculation** with different geometric shapes (rectangle, trapezoid, circle)
+- **Input management calculation** (fertilizers, herbicides, insecticides) considering area and applied quantity
+- **Data structures with vectors** to store and manipulate crop information
 - **Interactive menu** with operations:
   - Data entry
   - Data output (terminal reports)
   - Update and delete records
   - Application termination option
-- **Use of loops and conditional structures** for logical flow and calculation repetition.
+- **Use of loops and conditional structures** for logical flow and calculation repetition
 
 #### 🧮 Integration with R
 
-After data collection and calculation, an application in **R** performs basic statistical analyses:
+After data collection and calculation, an application in **R** performs statistical analyses:
+
 - Means, standard deviations, and dispersion
 - Graphical visualizations
-- Optional integration with public weather API (Open-Meteo) for climate analysis
+- Optional integration with public weather API ([Open-Meteo](https://open-meteo.com)) for climate analysis
 
 #### 🌦️ Going Beyond
 
-Using **R (not Python)**, it's possible to connect to a weather API to collect climate data and display meteorological information directly in the terminal, promoting integration between agricultural data and environmental variables.
+Using **R**, it's possible to connect to weather APIs to collect climate data and display information directly in the terminal, integrating agricultural and environmental data.
 
 ---
 
@@ -59,29 +78,26 @@ Using **R (not Python)**, it's possible to connect to a weather API to collect c
 
 #### 📘 Introduction
 
-**Phase 2** advances to the practical application of digital agriculture, focusing on **IoT and agricultural automation**.
-The team developed a **smart irrigation system** capable of monitoring soil variables and automatically deciding when to irrigate a plantation.
+**Phase 2** advances to the practical application of digital agriculture, focusing on **IoT and agricultural automation**. The team developed a **smart irrigation system** capable of monitoring soil variables and automatically deciding when to irrigate.
 
-#### ⚙️ Wokwi Simulation Walkthrough (`Fase2/SimulacaoWokwi/`)
+#### ⚙️ Wokwi Simulation (`Fase2/SimulacaoWokwi/`)
 
 Based on agricultural environment simulation, the following sensors and actuators were implemented:
 
-- **Buttons (3)** representing **Nitrogen (N)**, **Phosphorus (P)**, and **Potassium (K)** sensors.
-- **LDR Sensor (Light Dependent Resistor)** simulating **soil pH**, ranging from 0 to 14.
-- **DHT22 Sensor** representing **soil moisture** (replacing the actual moisture sensor).
-- **Blue Relay** representing a real **irrigation pump**, automatically controlled.
+- **Buttons (3)** representing **Nitrogen (N)**, **Phosphorus (P)**, and **Potassium (K)** sensors
+- **LDR Sensor (Light Dependent Resistor)** simulating **soil pH**, ranging from 0 to 14
+- **DHT22 Sensor** representing **soil moisture** (replacing the actual moisture sensor)
+- **Blue Relay** representing a real **irrigation pump**, automatically controlled
 
 #### 💧 Irrigation Logic
 
-The system monitors in real-time the levels of N, P, K, pH, and moisture.
-Based on this data, the ESP32 decides whether irrigation should be activated, simulating the actual operation of a digital farm.
-The irrigation logic varies according to the agricultural crop chosen by the team.
+The system monitors in real-time the levels of N, P, K, pH, and moisture. Based on this data, the ESP32 decides whether irrigation should be activated, simulating the actual operation of a digital farm. The irrigation logic varies according to the agricultural crop chosen.
 
 #### 🌐 Going Beyond – Integration with Python and R
 
-- **Integration with weather API (OpenWeather):** allows rain prediction and automatic irrigation adjustment.
-- **Reading via Serial Monitor:** allows manual data input in the Wokwi simulator during execution.
-- **Statistical analysis in R:** optionally, the system can use R to decide when to activate the irrigation pump based on climate and nutritional variables.
+- **Integration with weather API ([OpenWeather](https://openweathermap.org)):** allows rain prediction and automatic irrigation adjustment
+- **Reading via Serial Monitor:** allows manual data input in the Wokwi simulator during execution
+- **Statistical analysis in R:** the system can use R to decide when to activate the irrigation pump based on climate and nutritional variables
 
 This stage promotes integration between **sensing, IoT, Data Science, and agricultural automation**, reinforcing the concept of **smart farming**.
 
@@ -91,8 +107,7 @@ This stage promotes integration between **sensing, IoT, Data Science, and agricu
 
 #### 📘 Context
 
-**Agribusiness** is a sector that encompasses all activities related to the production, commercialization, and distribution of agricultural products — being one of the pillars of the Brazilian economy.
-The FarmTech Solutions agricultural management system was developed to integrate **operational, environmental, and financial data**, promoting **data-driven decision making**.
+**Agribusiness** encompasses all activities related to the production, commercialization, and distribution of agricultural products, being one of the pillars of the Brazilian economy. The FarmTech Solutions agricultural management system was developed to integrate **operational, environmental, and financial data**, promoting **data-driven decision making**.
 
 #### ⚙️ Features
 
@@ -109,6 +124,7 @@ The FarmTech Solutions agricultural management system was developed to integrate
 #### 🌱 Agribusiness Context
 
 The system is inserted within a scenario of **digital transformation in agriculture**, characterized by:
+
 - Food security and sustainability
 - Innovation with IoT and data analysis
 - Waste reduction and water resource optimization
@@ -121,11 +137,12 @@ The system is inserted within a scenario of **digital transformation in agricult
 #### 📘 Context
 
 At this stage, the team works with **real data from Brazilian agribusiness**, obtained from public sources such as:
-- **CONAB** – National Supply Company
-- **IBGE** – Brazilian Institute of Geography and Statistics
-- **MAPA** – Ministry of Agriculture
-- **EMBRAPA** – Brazilian Agricultural Research Corporation
-- **CNA Brasil** – Agriculture and Livestock Confederation
+
+- **[CONAB](https://www.conab.gov.br)** (National Supply Company)
+- **[IBGE](https://www.ibge.gov.br)** (Brazilian Institute of Geography and Statistics)
+- **[MAPA](https://www.gov.br/agriculture)** (Ministry of Agriculture)
+- **[EMBRAPA](https://www.embrapa.br)** (Brazilian Agricultural Research Corporation)
+- **[CNA Brasil](https://www.cnabrasil.org.br)** (Agriculture and Livestock Confederation)
 
 #### 📈 Deliverables
 
@@ -144,6 +161,7 @@ At this stage, the team works with **real data from Brazilian agribusiness**, ob
 #### 🌾 Objective
 
 Based on these analyses, the FarmTech Solutions team seeks to:
+
 - Understand regional productive patterns and behaviors
 - Evaluate productivity and sustainability indicators
 - Consolidate a statistical panel with data from 35 properties per region
@@ -219,11 +237,11 @@ Develop Machine Learning models to **predict the ideal agricultural crop** based
    - Identification of climate and nutritional patterns
 
 4. **Development of 5 Predictive Models**
-   - **Logistic Regression** - Linear baseline
-   - **K-Nearest Neighbors (KNN)** - Proximity-based classification
-   - **Support Vector Machine (SVM)** - RBF kernel for non-linear relationships
-   - **Decision Tree** - Interpretable rule-based model
-   - **Random Forest** - Robust ensemble
+   - **Logistic Regression:** Linear baseline
+   - **K-Nearest Neighbors (KNN):** Proximity-based classification
+   - **Support Vector Machine (SVM):** RBF kernel for non-linear relationships
+   - **Decision Tree:** Interpretable rule-based model
+   - **Random Forest:** Robust ensemble
 
 5. **Evaluation and Comparison**
    - Metrics: Accuracy, Precision, Recall, F1-Score
@@ -232,6 +250,7 @@ Develop Machine Learning models to **predict the ideal agricultural crop** based
    - Best model identification
 
 **Expected Results:**
+
 - Accuracy above 50% (random baseline)
 - Identification of most relevant features (temperature, humidity, pH, NPK)
 - ML-based crop recommendation system
@@ -256,22 +275,25 @@ jupyter notebook Analise_Produtos_Agricolas.ipynb
 ```
 
 **Libraries Used:**
-- `pandas`, `numpy` → Data manipulation
-- `matplotlib`, `seaborn` → Visualizations
-- `scikit-learn` → ML models, preprocessing, and metrics
+
+- `pandas`, `numpy`: Data manipulation
+- `matplotlib`, `seaborn`: Visualizations
+- `scikit-learn`: ML models, preprocessing, and metrics
 
 ---
 
 #### 🚀 How to Run Complete Phase 3
 
 **Oracle Dashboard:**
+
 ```powershell
 cd Fase3\Oracle
 pip install -r requirements.txt
-streamlit run scripts/dashboard.py
+streamlit run scripts\dashboard.py
 ```
 
 **Machine Learning:**
+
 ```powershell
 cd Fase3\MachineLearning
 pip install -r requirements.txt
@@ -281,61 +303,60 @@ jupyter notebook Analise_Produtos_Agricolas.ipynb
 ---
 
 ## 🛠️ Technologies Used
-pip install -r requirements.txt
-streamlit run scripts/dashboard.py
-```
 
----
-
-## 🛠️ Technologies Used
-
-- **Python 3.8+** → Crop management, analysis, backend, and Machine Learning
-- **R 4.0+** → Statistical analysis and visualizations
-- **C++/Arduino** → ESP32 firmware
-- **Oracle Database 19c** → Database
-- **Streamlit** → Interactive dashboard (Phase 3)
-- **Plotly** → Data visualizations (Phase 3)
-- **scikit-learn** → Machine Learning models (Phase 3)
-- **Jupyter Notebook** → Interactive ML analysis (Phase 3)
-- **ESP32** → IoT microcontroller
-- **Wokwi** → Hardware simulation
+- **Python 3.8+:** Crop management, analysis, backend, and Machine Learning
+- **R 4.0+:** Statistical analysis and visualizations
+- **C++/Arduino:** ESP32 firmware
+- **Oracle Database 19c:** Database
+- **Streamlit:** Interactive dashboard (Phase 3)
+- **Plotly:** Data visualizations (Phase 3)
+- **scikit-learn:** Machine Learning models (Phase 3)
+- **Jupyter Notebook:** Interactive ML analysis (Phase 3)
+- **ESP32:** IoT microcontroller
+- **Wokwi:** Hardware simulation
 
 ---
 
 ## 🚀 How to Run
 
 ### ✅ Complete Validation
+
 ```powershell
 cd testes
 python teste_completo.py
 ```
 
-### 🐍 Phase 1 - Python App
+### 🐍 Phase 1 - Python Application
+
 ```powershell
 cd Fase1\python_app
 python main.py
 ```
 
 ### 🧮 Phase 1 - R Analysis
+
 ```powershell
 cd Fase1\r_app
 Rscript analise.R
 Rscript clima.R banana
 ```
 
-### 🤖 Phase 2 - Wokwi Simulation Walkthrough
+### 🤖 Phase 2 - Wokwi Simulation
+
 1. Access [wokwi.com](https://wokwi.com)
 2. Load `Fase2/SimulacaoWokwi/config/diagram.json`
 3. Paste the code from `Fase2/SimulacaoWokwi/FarmTech.ino`
 4. Run the simulation
 
 ### 💼 Phase 2 - Management System
+
 ```powershell
 cd Fase2\SistemaGestaoAgricola
 python main.py
 ```
 
 ### 📊 Phase 3 - Oracle/Streamlit Dashboard
+
 ```powershell
 cd Fase3\Oracle
 pip install -r requirements.txt
@@ -343,6 +364,7 @@ streamlit run scripts\dashboard.py
 ```
 
 ### 🤖 Phase 3 - Machine Learning
+
 ```powershell
 cd Fase3\MachineLearning
 pip install -r requirements.txt
@@ -373,7 +395,11 @@ Complete technical documentation is available in the `docs/` folder:
 ---
 
 ## 👥 Authors
+
 Phellype Massarente • Carlos Costato • Cesar Azeredo
 
+---
+
 ## 📄 License
-MIT
+
+[MIT](LICENSE)
