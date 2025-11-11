@@ -150,13 +150,17 @@ Com base nessas análises, a equipe da FarmTech Solutions busca:
 
 ---
 
-### 📊 Fase 3 – Dashboard e Integração Oracle
+### 📊 Fase 3 – Dashboard, Machine Learning e Integração Oracle
 
 #### 📘 Introdução
 
-A **Fase 3** completa o ciclo de digitalização agrícola com a implementação de um **dashboard interativo** desenvolvido em **Python/Streamlit** integrado ao banco de dados **Oracle Database**.
+A **Fase 3** completa o ciclo de digitalização agrícola com a implementação de um **dashboard interativo** desenvolvido em **Python/Streamlit** integrado ao banco de dados **Oracle Database**, além de análises avançadas de **Machine Learning** para predição de culturas ideais.
 
-#### 🎯 Funcionalidades
+---
+
+#### 🎯 Dashboard e Integração Oracle
+
+**Funcionalidades:**
 
 - **Dashboard em tempo real** com visualizações de:
   - Níveis de umidade do solo, pH, nutrientes (N, P, K)
@@ -168,10 +172,10 @@ A **Fase 3** completa o ciclo de digitalização agrícola com a implementação
 - **Gráficos interativos** com Plotly
 - **Scripts de validação e exportação** de dados
 
-#### 📁 Estrutura
+**Estrutura:**
 
 ```
-Fase3/
+Fase3/Oracle/
 ├── data/                    # Dados CSV para testes
 ├── docs/                    # Documentação técnica
 ├── scripts/                 # Scripts Python
@@ -185,25 +189,108 @@ Fase3/
 └── start_dashboard.bat      # Inicializador Windows
 ```
 
-#### 🚀 Como Executar
+---
 
+#### 🤖 Machine Learning - Análise Preditiva de Culturas
+
+**Objetivo:**  
+Desenvolver modelos de Machine Learning para **predizer a cultura agrícola ideal** com base em condições climáticas e de solo, promovendo decisões baseadas em dados e otimização da produtividade.
+
+**Metodologia:**
+
+1. **Análise Exploratória de Dados (EDA)**
+   - Familiarização com dataset de sensores IoT
+   - Verificação de qualidade dos dados (nulos, duplicados, outliers)
+   - Estatísticas descritivas completas
+
+2. **Análise Descritiva Visual**
+   - Mínimo de 5 gráficos analíticos:
+     - Distribuição de culturas
+     - Temperatura vs Umidade do solo
+     - Boxplots de variáveis climáticas
+     - Matriz de correlação
+     - Produtividade por cultura
+     - Comparação de modelos ML
+     - Matriz de confusão
+
+3. **Perfil Ideal de Solo/Clima**
+   - Análise estatística de condições ótimas por cultura
+   - Comparação entre diferentes culturas (Banana, Milho, etc.)
+   - Identificação de padrões climáticos e nutricionais
+
+4. **Desenvolvimento de 5 Modelos Preditivos**
+   - **Regressão Logística** - Baseline linear
+   - **K-Nearest Neighbors (KNN)** - Classificação por proximidade
+   - **Support Vector Machine (SVM)** - Kernel RBF para relações não-lineares
+   - **Decision Tree** - Modelo interpretável baseado em regras
+   - **Random Forest** - Ensemble robusto
+
+5. **Avaliação e Comparação**
+   - Métricas: Accuracy, Precision, Recall, F1-Score
+   - Matriz de confusão
+   - Validação com dados de teste (80/20 split)
+   - Identificação do melhor modelo
+
+**Resultados Esperados:**
+- Acurácia superior a 50% (baseline aleatório)
+- Identificação de features mais relevantes (temperatura, umidade, pH, NPK)
+- Sistema de recomendação de culturas baseado em ML
+- Insights sobre perfis climáticos ideais
+
+**Estrutura:**
+
+```
+Fase3/MachineLearning/
+├── Analise_Produtos_Agricolas.ipynb  # Notebook Jupyter completo
+├── Atividade_Cap10_produtos_agricolas.csv  # Dataset
+├── requirements.txt                   # Dependências Python
+└── atividade                          # Especificações do projeto
+```
+
+**Como Executar:**
+
+```powershell
+cd Fase3\MachineLearning
+pip install -r requirements.txt
+jupyter notebook Analise_Produtos_Agricolas.ipynb
+```
+
+**Bibliotecas Utilizadas:**
+- `pandas`, `numpy` → Manipulação de dados
+- `matplotlib`, `seaborn` → Visualizações
+- `scikit-learn` → Modelos de ML, pré-processamento e métricas
+
+---
+
+#### 🚀 Como Executar a Fase 3 Completa
+
+**Dashboard Oracle:**
 ```powershell
 cd Fase3
 pip install -r requirements.txt
 streamlit run scripts/dashboard.py
 ```
 
+**Machine Learning:**
+```powershell
+cd Fase3\MachineLearning
+pip install -r requirements.txt
+jupyter notebook Analise_Produtos_Agricolas.ipynb
+```
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Python 3.8+** → Gestão de cultivos, análise e backend  
-- **R 4.0+** → Análise estatística e visualizações  
-- **C++/Arduino** → Firmware ESP32  
-- **Oracle Database 19c** → Banco de dados  
+- **Python 3.8+** → Gestão de cultivos, análise, backend e Machine Learning
+- **R 4.0+** → Análise estatística e visualizações
+- **C++/Arduino** → Firmware ESP32
+- **Oracle Database 19c** → Banco de dados
 - **Streamlit** → Dashboard interativo (Fase 3)
 - **Plotly** → Visualizações de dados (Fase 3)
-- **ESP32** → Microcontrolador IoT  
+- **scikit-learn** → Modelos de Machine Learning (Fase 3)
+- **Jupyter Notebook** → Análise ML interativa (Fase 3)
+- **ESP32** → Microcontrolador IoT
 - **Wokwi** → Simulação de hardware  
 
 ---
@@ -243,9 +330,16 @@ python main.py
 
 ### 📊 Fase 3 - Dashboard Oracle/Streamlit
 ```powershell
-cd Fase3
+cd Fase3\Oracle
 pip install -r requirements.txt
 streamlit run scripts\dashboard.py
+```
+
+### 🤖 Fase 3 - Machine Learning
+```powershell
+cd Fase3\MachineLearning
+pip install -r requirements.txt
+jupyter notebook Analise_Produtos_Agricolas.ipynb
 ```
 
 ---

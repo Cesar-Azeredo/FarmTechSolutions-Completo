@@ -150,13 +150,17 @@ Based on these analyses, the FarmTech Solutions team seeks to:
 
 ---
 
-### 📊 Phase 3 – Dashboard and Oracle Integration
+### 📊 Phase 3 – Dashboard, Machine Learning, and Oracle Integration
 
 #### 📘 Introduction
 
-**Phase 3** completes the agricultural digitalization cycle with the implementation of an **interactive dashboard** developed in **Python/Streamlit** integrated with **Oracle Database**.
+**Phase 3** completes the agricultural digitalization cycle with the implementation of an **interactive dashboard** developed in **Python/Streamlit** integrated with **Oracle Database**, plus advanced **Machine Learning** analyses for predicting ideal crops.
 
-#### 🎯 Features
+---
+
+#### 🎯 Dashboard and Oracle Integration
+
+**Features:**
 
 - **Real-time dashboard** with visualizations of:
   - Soil moisture levels, pH, nutrients (N, P, K)
@@ -168,10 +172,10 @@ Based on these analyses, the FarmTech Solutions team seeks to:
 - **Interactive charts** with Plotly
 - **Validation and data export scripts**
 
-#### 📁 Structure
+**Structure:**
 
 ```
-Fase3/
+Fase3/Oracle/
 ├── data/                    # CSV data for testing
 ├── docs/                    # Technical documentation
 ├── scripts/                 # Python scripts
@@ -185,10 +189,98 @@ Fase3/
 └── start_dashboard.bat      # Windows launcher
 ```
 
-#### 🚀 How to Run
+---
+
+#### 🤖 Machine Learning - Predictive Crop Analysis
+
+**Objective:**  
+Develop Machine Learning models to **predict the ideal agricultural crop** based on climate and soil conditions, promoting data-driven decisions and productivity optimization.
+
+**Methodology:**
+
+1. **Exploratory Data Analysis (EDA)**
+   - Familiarization with IoT sensor dataset
+   - Data quality verification (nulls, duplicates, outliers)
+   - Complete descriptive statistics
+
+2. **Visual Descriptive Analysis**
+   - Minimum of 5 analytical charts:
+     - Crop distribution
+     - Temperature vs Soil moisture
+     - Climate variables boxplots
+     - Correlation matrix
+     - Productivity by crop
+     - ML models comparison
+     - Confusion matrix
+
+3. **Ideal Soil/Climate Profile**
+   - Statistical analysis of optimal conditions per crop
+   - Comparison between different crops (Banana, Corn, etc.)
+   - Identification of climate and nutritional patterns
+
+4. **Development of 5 Predictive Models**
+   - **Logistic Regression** - Linear baseline
+   - **K-Nearest Neighbors (KNN)** - Proximity-based classification
+   - **Support Vector Machine (SVM)** - RBF kernel for non-linear relationships
+   - **Decision Tree** - Interpretable rule-based model
+   - **Random Forest** - Robust ensemble
+
+5. **Evaluation and Comparison**
+   - Metrics: Accuracy, Precision, Recall, F1-Score
+   - Confusion matrix
+   - Validation with test data (80/20 split)
+   - Best model identification
+
+**Expected Results:**
+- Accuracy above 50% (random baseline)
+- Identification of most relevant features (temperature, humidity, pH, NPK)
+- ML-based crop recommendation system
+- Insights on ideal climate profiles
+
+**Structure:**
+
+```
+Fase3/MachineLearning/
+├── Analise_Produtos_Agricolas.ipynb  # Complete Jupyter Notebook
+├── Atividade_Cap10_produtos_agricolas.csv  # Dataset
+├── requirements.txt                   # Python dependencies
+└── atividade                          # Project specifications
+```
+
+**How to Run:**
 
 ```powershell
-cd Fase3
+cd Fase3\MachineLearning
+pip install -r requirements.txt
+jupyter notebook Analise_Produtos_Agricolas.ipynb
+```
+
+**Libraries Used:**
+- `pandas`, `numpy` → Data manipulation
+- `matplotlib`, `seaborn` → Visualizations
+- `scikit-learn` → ML models, preprocessing, and metrics
+
+---
+
+#### 🚀 How to Run Complete Phase 3
+
+**Oracle Dashboard:**
+```powershell
+cd Fase3\Oracle
+pip install -r requirements.txt
+streamlit run scripts/dashboard.py
+```
+
+**Machine Learning:**
+```powershell
+cd Fase3\MachineLearning
+pip install -r requirements.txt
+jupyter notebook Analise_Produtos_Agricolas.ipynb
+```
+
+---
+
+## 🛠️ Technologies Used
 pip install -r requirements.txt
 streamlit run scripts/dashboard.py
 ```
@@ -197,12 +289,14 @@ streamlit run scripts/dashboard.py
 
 ## 🛠️ Technologies Used
 
-- **Python 3.8+** → Crop management, analysis, and backend
+- **Python 3.8+** → Crop management, analysis, backend, and Machine Learning
 - **R 4.0+** → Statistical analysis and visualizations
 - **C++/Arduino** → ESP32 firmware
 - **Oracle Database 19c** → Database
 - **Streamlit** → Interactive dashboard (Phase 3)
 - **Plotly** → Data visualizations (Phase 3)
+- **scikit-learn** → Machine Learning models (Phase 3)
+- **Jupyter Notebook** → Interactive ML analysis (Phase 3)
 - **ESP32** → IoT microcontroller
 - **Wokwi** → Hardware simulation
 
@@ -243,9 +337,16 @@ python main.py
 
 ### 📊 Phase 3 - Oracle/Streamlit Dashboard
 ```powershell
-cd Fase3
+cd Fase3\Oracle
 pip install -r requirements.txt
 streamlit run scripts\dashboard.py
+```
+
+### 🤖 Phase 3 - Machine Learning
+```powershell
+cd Fase3\MachineLearning
+pip install -r requirements.txt
+jupyter notebook Analise_Produtos_Agricolas.ipynb
 ```
 
 ---
