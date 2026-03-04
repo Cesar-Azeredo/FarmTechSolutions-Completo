@@ -157,6 +157,33 @@ python scripts\test_connection.py
 
 ---
 
+## 🧠 Fase 4 - Classificação e Previsão Inteligente
+
+### Sklearn - Classificação de Grãos
+
+```powershell
+cd Fase4\Sklearn
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook wheat_classification.ipynb
+```
+
+### Dados - Regressão + Dashboard
+
+```powershell
+cd Fase4\Dados
+pip install pandas numpy scikit-learn streamlit plotly
+python iot_ingestion.py
+python ml_pipeline.py
+streamlit run app.py
+```
+
+**O que este bloco instala/roda:**
+- Integração de logs IoT no SQLite (`iot_ingestion.py`)
+- Pipeline de regressão com métricas MAE, MSE, RMSE e R² (`ml_pipeline.py`)
+- Dashboard Streamlit com previsões e recomendações (`app.py`)
+
+---
+
 ## ✅ Verificação da Instalação
 
 ### Checklist
@@ -168,6 +195,9 @@ python scripts\test_connection.py
 - [ ] Análise R gera gráficos
 - [ ] Dashboard Streamlit conecta ao Oracle
 - [ ] Visualizações aparecem corretamente
+- [ ] Notebook de classificação da Fase 4 executa sem erro
+- [ ] Ingestão IoT da Fase 4 popula tabela SQL
+- [ ] Dashboard da Fase 4 abre em `http://localhost:8501`
 
 ---
 

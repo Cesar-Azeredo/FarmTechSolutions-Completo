@@ -13,11 +13,12 @@
 
 FarmTech Solutions is a startup focused on **digital agriculture**, combining technology, innovation, and sustainability to optimize crop cultivation and agricultural management processes.
 
-The system is divided into **three main phases**:
+The system is divided into **four main phases**:
 
 - 🌱 **Phase 1:** Crop management and agricultural data analysis
 - 🤖 **Phase 2:** Smart irrigation system with IoT (ESP32), Oracle Database integration, and statistical analysis
 - 📊 **Phase 3:** Interactive dashboard and Machine Learning models for crop prediction
+- 🧠 **Phase 4:** Wheat grain classification and intelligent agricultural forecasting with supervised regression
 
 The goal is to demonstrate the potential of precision agriculture through IoT, AI, and data analysis to improve productivity and efficiency in agribusiness.
 
@@ -30,6 +31,7 @@ The goal is to demonstrate the potential of precision agriculture through IoT, A
   - [Phase 1 – Crop Management and Data Analysis](#-phase-1--crop-management-and-data-analysis)
   - [Phase 2 – IoT and Integrated Systems](#-phase-2--iot-and-integrated-systems)
   - [Phase 3 – Dashboard, Machine Learning, and Oracle Integration](#-phase-3--dashboard-machine-learning-and-oracle-integration)
+  - [Phase 4 – Intelligent Forecasting and Grain Classification](#-phase-4--intelligent-forecasting-and-grain-classification)
 - [Technologies Used](#️-technologies-used)
 - [How to Run](#-how-to-run)
 - [Validation and Testing](#-validation-and-testing)
@@ -314,16 +316,84 @@ jupyter notebook Analise_Produtos_Agricolas.ipynb
 
 ---
 
+### 🧠 Phase 4 – Intelligent Forecasting and Grain Classification
+
+#### 📘 Overview
+
+Phase 4 is implemented in two deliverable folders:
+- `Fase4/Sklearn/`: wheat grain classification with CRISP-DM workflow
+- `Fase4/Dados/`: intelligent farming assistant with regression pipeline + Streamlit dashboard
+
+#### 🌾 Activity 1 – Wheat Grain Classification (`Fase4/Sklearn/`)
+
+Implemented files:
+```
+Fase4/Sklearn/
+├── wheat_classification.ipynb
+└── seeds_dataset.txt
+```
+
+What is implemented:
+- Exploratory Data Analysis (histograms, boxplots, pairplot, correlation heatmap)
+- Data preprocessing and train/test split
+- Comparison of multiple classifiers (KNN, SVM, Random Forest, Naive Bayes, Logistic Regression)
+- Evaluation with Accuracy, Precision, Recall, F1-score, and confusion matrix
+- Hyperparameter optimization with GridSearchCV
+- Interpretation and actionable insights
+
+#### 🤖 Activity 2 – Intelligent Agricultural Forecasting (`Fase4/Dados/`)
+
+Implemented files:
+```
+Fase4/Dados/
+├── app.py
+├── iot_ingestion.py
+├── ml_pipeline.py
+├── database/
+│   └── farmtech.db
+└── logs_irrigacao_api.json
+```
+
+What is implemented:
+- Regression pipeline with model comparison and metrics (MAE, MSE, RMSE, R²)
+- Interactive Streamlit dashboard with:
+  - model metrics table
+  - correlation charts and trend analysis
+  - real-time yield prediction form
+  - irrigation/soil management recommendations
+- IoT log ingestion into SQLite table (`iot_weather_logs`) for data integration
+
+#### 🚀 How to Run Phase 4
+
+**Grain Classification Notebook:**
+
+```powershell
+cd Fase4\Sklearn
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook wheat_classification.ipynb
+```
+
+**Forecasting Dashboard:**
+
+```powershell
+cd Fase4\Dados
+pip install pandas numpy scikit-learn streamlit plotly
+python iot_ingestion.py
+streamlit run app.py
+```
+
+---
+
 ## 🛠️ Technologies Used
 
 - **Python 3.8+:** Crop management, analysis, backend, and Machine Learning
 - **R 4.0+:** Statistical analysis and visualizations
 - **C++/Arduino:** ESP32 firmware
 - **Oracle Database 19c:** Database
-- **Streamlit:** Interactive dashboard (Phase 3)
-- **Plotly:** Data visualizations (Phase 3)
-- **scikit-learn:** Machine Learning models (Phase 3)
-- **Jupyter Notebook:** Interactive ML analysis (Phase 3)
+- **Streamlit:** Interactive dashboard (Phases 3 and 4)
+- **Plotly:** Data visualizations (Phases 3 and 4)
+- **scikit-learn:** Machine Learning models (Phases 3 and 4)
+- **Jupyter Notebook:** Interactive ML analysis (Phases 3 and 4)
 - **ESP32:** IoT microcontroller
 - **Wokwi:** Hardware simulation
 
@@ -381,6 +451,23 @@ streamlit run scripts\dashboard.py
 cd Fase3\MachineLearning
 pip install -r requirements.txt
 jupyter notebook Analise_Produtos_Agricolas.ipynb
+```
+
+### 🧠 Phase 4 - Wheat Grain Classification
+
+```powershell
+cd Fase4\Sklearn
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook wheat_classification.ipynb
+```
+
+### 🧠 Phase 4 - Intelligent Forecasting Dashboard
+
+```powershell
+cd Fase4\Dados
+pip install pandas numpy scikit-learn streamlit plotly
+python iot_ingestion.py
+streamlit run app.py
 ```
 
 ---

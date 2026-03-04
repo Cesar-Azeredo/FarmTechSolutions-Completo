@@ -320,13 +320,9 @@ jupyter notebook Analise_Produtos_Agricolas.ipynb
 
 #### 📘 Introdução
 
-A **Fase 4** marca a consolidação do conhecimento técnico, aplicando **Inteligência Artificial avançada** diretamente sobre dados agrícolas coletados e estruturados nas fases anteriores. Nesta etapa, transformamos dados em conhecimento através de aprendizado de máquina supervisionado, gerando previsões e insights relevantes sobre irrigação, fertilização e produtividade.
-
-O foco é implementar um **Assistente Agrícola Inteligente** que:
-- Classifica variedades de grãos com alta precisão
-- Prevê variáveis críticas do campo (umidade, pH, rendimento)
-- Sugere ações futuras de manejo agrícola
-- Apresenta resultados em dashboards interativos
+A **Fase 4** está organizada em duas entregas separadas:
+- `Fase4/Sklearn/`: atividade de classificação de grãos (Seeds Dataset)
+- `Fase4/Dados/`: atividade de previsão inteligente na agricultura
 
 ---
 
@@ -366,17 +362,17 @@ O foco é implementar um **Assistente Agrícola Inteligente** que:
    - Insights sobre características relevantes
    - Conclusões para classificação automática
 
-**Entregáveis:**
-- Notebook Jupyter com análise completa
-- Vídeo demonstração (máx 5 minutos)
-
-**Estrutura:**
+**Estrutura implementada em `Fase4/Sklearn/`:**
 ```
 Fase4/Sklearn/
 ├── wheat_classification.ipynb
-├── seeds_dataset.txt
-└── README.md
+└── seeds_dataset.txt
 ```
+
+**Validação de entregáveis:**
+- ✅ Dataset presente (`seeds_dataset.txt`) com 210 amostras
+- ✅ Notebook completo com EDA, pré-processamento, comparação de algoritmos e otimização de hiperparâmetros
+- ✅ Métricas implementadas: acurácia, precisão, recall, F1-score e matriz de confusão
 
 ---
 
@@ -418,14 +414,23 @@ Fase4/Sklearn/
 
 **Entrega:** Vídeo completo com demonstração (máx 5 minutos)
 
-**Estrutura:**
+**Estrutura implementada em `Fase4/Dados/`:**
 ```
 Fase4/Dados/
-├── database/              # Modelos de BD
-├── cursotiaor/            # Aplicações de integração
-├── logs_irrigacao_api.json
-└── README.md
+├── app.py
+├── iot_ingestion.py
+├── ml_pipeline.py
+├── database/
+│   └── farmtech.db
+└── logs_irrigacao_api.json
 ```
+
+**Validação de entregáveis:**
+- ✅ Base de dados local presente (`database/farmtech.db`)
+- ✅ Log de dados presente (`logs_irrigacao_api.json`)
+- ✅ Pipeline de regressão implementado (`ml_pipeline.py`) com MAE, MSE, RMSE e R²
+- ✅ Dashboard interativo Streamlit implementado (`app.py`) com métricas, correlações, tendências e previsão em tempo real
+- ✅ Integração IoT → Banco implementada (`iot_ingestion.py`) com ingestão de logs para tabela SQL
 
 ---
 
@@ -435,6 +440,7 @@ Fase4/Dados/
 
 ```powershell
 cd Fase4\Sklearn
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
 jupyter notebook wheat_classification.ipynb
 ```
 
@@ -442,7 +448,8 @@ jupyter notebook wheat_classification.ipynb
 
 ```powershell
 cd Fase4\Dados
-pip install -r requirements.txt
+pip install pandas numpy scikit-learn streamlit plotly
+python iot_ingestion.py
 streamlit run app.py
 ```
 
@@ -523,7 +530,7 @@ jupyter notebook Analise_Produtos_Agricolas.ipynb
 
 ```powershell
 cd Fase4\Sklearn
-pip install -r requirements.txt
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
 jupyter notebook wheat_classification.ipynb
 ```
 
@@ -531,7 +538,8 @@ jupyter notebook wheat_classification.ipynb
 
 ```powershell
 cd Fase4\Dados
-pip install -r requirements.txt
+pip install pandas numpy scikit-learn streamlit plotly
+python iot_ingestion.py
 streamlit run app.py
 # ou
 python -m streamlit run app.py

@@ -182,6 +182,50 @@ python scripts\export_evidence.py
 
 ---
 
+## 🧠 Fase 4: Classificação e Previsão Inteligente
+
+### Sklearn - Classificação de Grãos (Seeds Dataset)
+
+**Executar notebook:**
+```powershell
+cd Fase4\Sklearn
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook wheat_classification.ipynb
+```
+
+**Cobertura da atividade:**
+- EDA completo (histograma, boxplot, pairplot, correlação)
+- Treino e comparação de KNN, SVM, RandomForest, NaiveBayes e LogisticRegression
+- Otimização com GridSearchCV
+- Métricas: acurácia, precisão, recall, F1-score e matriz de confusão
+
+### Dados - Previsão Inteligente na Agricultura
+
+**1) Ingestão IoT para banco SQL:**
+```powershell
+cd Fase4\Dados
+python iot_ingestion.py
+```
+
+**2) Pipeline de regressão (CLI):**
+```powershell
+python ml_pipeline.py
+```
+
+**3) Dashboard interativo (Streamlit):**
+```powershell
+streamlit run app.py
+```
+
+**O dashboard exibe:**
+- Métricas de regressão (MAE, MSE, RMSE, R²)
+- Gráficos de correlação e tendência
+- Formulário de previsão em tempo real
+- Recomendações de irrigação e manejo
+- Tabela de integração IoT (`iot_weather_logs`)
+
+---
+
 ### Estrutura de Dados (Tabela SENSORES)
 
 | Coluna | Descrição | Tipo |
