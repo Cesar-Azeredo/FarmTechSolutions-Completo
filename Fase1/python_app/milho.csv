@@ -1,21 +1,21 @@
 raio,comprimento,largura,insumo,qtd_insumo,unidade,area,figura
-22,44,44,Nitrogênio,84.8,L,1520.5344,3
-,48,22,Fosfato,473.24,L,1056,1
-,10,38,Inseticida,403.6,L,190.0,2
-25,50,50,Herbicida,153.06,mL,1963.5,3
-5,10,10,Herbicida,133.97,kg,78.53999999999999,3
-,49,45,Pulverizar 500 mL/metro,395.69,g,1102.5,2
-,25,8,Pulverizar 500 mL/metro,375.61,mL,200,1
-,9,38,Herbicida,393.72,L,342,1
-8,16,16,Potássio,387.23,L,201.0624,3
-18,36,36,Potássio,326.8,L,1017.8783999999999,3
-16,32,32,Nitrogênio,351.0,L,804.2496,3
-19,38,38,Inseticida,333.43,g,1134.1176,3
-,25,37,Herbicida,91.33,mL,925,1
-22,44,44,Fosfato,445.08,kg,1520.5344,3
-,26,15,Fosfato,269.66,kg,390,1
-,23,30,Potássio,378.64,mL,690,1
-,18,12,Inseticida,149.87,L,216,1
-,21,34,Potássio,292.14,mL,357.0,2
-,8,19,Herbicida,209.94,mL,152,1
-,26,43,Potássio,123.87,mL,1118,1
+,10,22,Potássio,41.0,L,220,1
+,20,44,Nitrogênio,459.26,L,440.0,2
+25,50,50,Potássio,333.16,L,1963.5,3
+,18,14,Nitrogênio,348.22,mL,252,1
+,43,25,Herbicida,320.49,kg,1075,1
+8,16,16,Nitrogênio,188.47,mL,201.0624,3
+,33,48,Inseticida,358.26,g,792.0,2
+7,14,14,Herbicida,41.75,mL,153.9384,3
+,43,14,Pulverizar 500 mL/metro,266.18,L,602,1
+,14,12,Herbicida,203.54,kg,84.0,2
+,18,6,Herbicida,158.38,L,54.0,2
+,22,42,Potássio,274.8,mL,462.0,2
+14,28,28,Fosfato,450.27,kg,615.7536,3
+21,42,42,Nitrogênio,39.45,L,1385.4456,3
+,47,25,Nitrogênio,159.21,mL,1175,1
+,47,12,Inseticida,274.33,kg,564,1
+,30,32,Nitrogênio,185.47,mL,960,1
+,34,28,Nitrogênio,181.06,L,952,1
+,47,30,Nitrogênio,369.83,kg,1410,1
+,17,40,Herbicida,351.39,g,680,1

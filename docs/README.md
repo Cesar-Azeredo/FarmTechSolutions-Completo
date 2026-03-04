@@ -13,11 +13,12 @@
 
 FarmTech Solutions é uma startup voltada à **agricultura digital**, unindo tecnologia, inovação e sustentabilidade para otimizar os processos de cultivo e gestão agrícola.
 
-O sistema é dividido em **três fases principais**:
+O sistema é dividido em **quatro fases principais**:
 
 - 🌱 **Fase 1:** Gestão de cultivos e análise de dados agrícolas
 - 🤖 **Fase 2:** Sistema de irrigação inteligente com IoT (ESP32), integração com Oracle Database e análise estatística
 - 📊 **Fase 3:** Dashboard interativo e modelos de Machine Learning para predição de culturas
+- 🧠 **Fase 4:** Machine Learning avançado com classificação de grãos e previsões inteligentes para sistemas agrícolas automatizados
 
 O objetivo é demonstrar o potencial da agricultura de precisão através do uso de IoT, IA e análise de dados para aprimorar a produtividade e eficiência no agronegócio.
 
@@ -30,6 +31,7 @@ O objetivo é demonstrar o potencial da agricultura de precisão através do uso
   - [Fase 1 – Gestão de Cultivos e Análise de Dados](#-fase-1--gestão-de-cultivos-e-análise-de-dados)
   - [Fase 2 – IoT e Sistemas Integrados](#-fase-2--iot-e-sistemas-integrados)
   - [Fase 3 – Dashboard, Machine Learning e Integração Oracle](#-fase-3--dashboard-machine-learning-e-integração-oracle)
+  - [Fase 4 – Machine Learning Avançado e Previsões Inteligentes](#-fase-4--machine-learning-avançado-e-previsões-inteligentes)
 - [Tecnologias Utilizadas](#️-tecnologias-utilizadas)
 - [Como Executar](#-como-executar)
 - [Validação e Testes](#-validação-e-testes)
@@ -314,18 +316,152 @@ jupyter notebook Analise_Produtos_Agricolas.ipynb
 
 ---
 
+### 🧠 Fase 4 – Machine Learning Avançado e Previsões Inteligentes
+
+#### 📘 Introdução
+
+A **Fase 4** marca a consolidação do conhecimento técnico, aplicando **Inteligência Artificial avançada** diretamente sobre dados agrícolas coletados e estruturados nas fases anteriores. Nesta etapa, transformamos dados em conhecimento através de aprendizado de máquina supervisionado, gerando previsões e insights relevantes sobre irrigação, fertilização e produtividade.
+
+O foco é implementar um **Assistente Agrícola Inteligente** que:
+- Classifica variedades de grãos com alta precisão
+- Prevê variáveis críticas do campo (umidade, pH, rendimento)
+- Sugere ações futuras de manejo agrícola
+- Apresenta resultados em dashboards interativos
+
+---
+
+#### 🌾 Atividade 1 – Classificação de Grãos com ML (Sklearn)
+
+**Objetivo:** Aplicar CRISP-DM para classificar variedades de grãos de trigo com base em características físicas
+
+**Dataset:** Seeds Dataset (UCI ML Repository) - 210 amostras de 3 variedades (Kama, Rosa, Canadian)
+
+**Características:**
+- Área, Perímetro, Compacidade
+- Comprimento/Largura do Núcleo
+- Coeficiente de Assimetria
+- Comprimento do Sulco
+
+**Tarefas:**
+
+1. **Análise e Pré-processamento**
+   - Importação e exploração do dataset
+   - Estatísticas descritivas (média, mediana, desvio padrão)
+   - Visualizações: histogramas, boxplots, scatter plots
+   - Tratamento de valores ausentes
+   - Normalização/Padronização de features
+
+2. **Implementação e Comparação de Algoritmos**
+   - Validação com treino (70%) e teste (30%)
+   - KNN, SVM, Random Forest, Naive Bayes, Logistic Regression
+   - Métricas: acurácia, precisão, recall, F1-score, matriz de confusão
+
+3. **Otimização de Modelos**
+   - Grid Search ou Randomized Search para hiperparâmetros
+   - Retreinamento e reavaliação
+   - Análise de melhoria de desempenho
+
+4. **Interpretação de Resultados**
+   - Análise profunda de cada modelo
+   - Insights sobre características relevantes
+   - Conclusões para classificação automática
+
+**Entregáveis:**
+- Notebook Jupyter com análise completa
+- Vídeo demonstração (máx 5 minutos)
+
+**Estrutura:**
+```
+Fase4/Sklearn/
+├── wheat_classification.ipynb
+├── seeds_dataset.txt
+└── README.md
+```
+
+---
+
+#### 🤖 Atividade 2 – Previsão Inteligente na Agricultura
+
+**Objetivo:** Criar sistema de IA para prever variáveis agrícolas e sugerir ações de manejo
+
+**Componentes Principais:**
+
+##### PARTE 1 – Integração com Streamlit
+- Pipeline ML com Scikit-Learn
+- Dashboard interativo em tempo real
+- Métricas, gráficos de correlação, previsões
+- Visualização para gestores agrícolas
+
+**Entrega:** Vídeo demonstrando integração e funcionamento (máx 5 minutos)
+
+##### PARTE 2 – Algoritmos Preditivos
+- Treinamento de modelos de regressão
+- Previsão de:
+  - Volume de irrigação
+  - Necessidade de fertilização
+  - Estimativa de rendimento
+- Avaliação com MAE, MSE, RMSE, R²
+
+**Entrega:** Vídeo completo com pipeline, dashboard e interpretação (máx 5 minutos)
+
+##### IR ALÉM 1 – Integração IoT e Banco de Dados
+- Modelo de BD para armazenar dados de sensores
+- Ingestão automática de dados (reais ou Wokwi)
+- Arquitetura baseada em Cognitive Data Science
+
+**Entrega:** Vídeo demonstrando ingestão (máx 3 minutos)
+
+##### IR ALÉM 2 – Dashboard Analítico Interativo
+- Visualizações: correlações, previsões, tendências
+- Suporte a Streamlit, Power BI ou React Native
+- Interface amigável para gestores
+
+**Entrega:** Vídeo completo com demonstração (máx 5 minutos)
+
+**Estrutura:**
+```
+Fase4/Dados/
+├── database/              # Modelos de BD
+├── cursotiaor/            # Aplicações de integração
+├── logs_irrigacao_api.json
+└── README.md
+```
+
+---
+
+#### 🚀 Como Executar a Fase 4
+
+**Classificação de Grãos:**
+
+```powershell
+cd Fase4\Sklearn
+jupyter notebook wheat_classification.ipynb
+```
+
+**Dashboard de Previsões:**
+
+```powershell
+cd Fase4\Dados
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Python 3.8+:** Gestão de cultivos, análise, backend e Machine Learning
 - **R 4.0+:** Análise estatística e visualizações
 - **C++/Arduino:** Firmware ESP32
 - **Oracle Database 19c:** Banco de dados
-- **Streamlit:** Dashboard interativo (Fase 3)
-- **Plotly:** Visualizações de dados (Fase 3)
-- **scikit-learn:** Modelos de Machine Learning (Fase 3)
-- **Jupyter Notebook:** Análise ML interativa (Fase 3)
+- **Streamlit:** Dashboard interativo (Fases 3 e 4)
+- **Plotly:** Visualizações de dados (Fases 3 e 4)
+- **scikit-learn:** Modelos de Machine Learning (Fases 3 e 4)
+- **Jupyter Notebook:** Análises ML interativas (Fases 3 e 4)
 - **ESP32:** Microcontrolador IoT
 - **Wokwi:** Simulação de hardware
+- **pandas, numpy:** Manipulação de dados
+- **Flask/FastAPI:** APIs (opcional, para IR ALÉM)
 
 ---
 
@@ -381,6 +517,24 @@ streamlit run scripts\dashboard.py
 cd Fase3\MachineLearning
 pip install -r requirements.txt
 jupyter notebook Analise_Produtos_Agricolas.ipynb
+```
+
+### 🧠 Fase 4 - Classificação de Grãos
+
+```powershell
+cd Fase4\Sklearn
+pip install -r requirements.txt
+jupyter notebook wheat_classification.ipynb
+```
+
+### 🧠 Fase 4 - Dashboard de Previsões Agrícolas
+
+```powershell
+cd Fase4\Dados
+pip install -r requirements.txt
+streamlit run app.py
+# ou
+python -m streamlit run app.py
 ```
 
 ---

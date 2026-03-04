@@ -50,6 +50,8 @@ FASE2_CAP1 = PROJECT_ROOT / "Fase2" / "Cap 1"
 FASE2_CAP6 = PROJECT_ROOT / "Fase2" / "Cap 6"
 FASE2_CAP7 = PROJECT_ROOT / "Fase2" / "Cap 7"
 FASE3 = PROJECT_ROOT / "Fase3"
+FASE4_SKLEARN = PROJECT_ROOT / "Fase4" / "Sklearn"
+FASE4_DADOS = PROJECT_ROOT / "Fase4" / "Dados"
 
 resultados = {}
 
@@ -515,6 +517,127 @@ def test_fase3():
         print_error(f"Erro ao testar Fase3: {e}")
         return False
 
+def test_fase4_sklearn():
+    """Testa Fase 4 - Classificação de Grãos com Sklearn"""
+    print_header("FASE 4 - CLASSIFICAÇÃO DE GRÃOS (SKLEARN)")
+    
+    try:
+        if not FASE4_SKLEARN.exists():
+            print_error("Pasta Fase4/Sklearn/ não encontrada")
+            return False
+        
+        print_success("Pasta Fase4/Sklearn/ encontrada")
+        
+        # Verificar arquivos principais
+        notebook = FASE4_SKLEARN / "wheat_classification.ipynb"
+        dataset = FASE4_SKLEARN / "seeds_dataset.txt"
+        
+        if not notebook.exists():
+            print_error("wheat_classification.ipynb não encontrado")
+            return False
+        
+        print_success("Notebook de classificação encontrado")
+        
+        if not dataset.exists():
+            print_error("seeds_dataset.txt não encontrado")
+            return False
+        
+        print_success("Dataset de sementes encontrado")
+        
+        # Verificar número de amostras no dataset
+        with open(dataset, 'r') as f:
+            lines = f.readlines()
+            num_samples = len(lines)
+            if num_samples >= 200:
+                print_success(f"Dataset com {num_samples} amostras (esperado ~210)")
+            else:
+                print_warning(f"Dataset com apenas {num_samples} amostras (esperado ~210)")
+        
+        # Verificar README
+        readme = FASE4_SKLEARN / "README.md"
+        if readme.exists():
+            print_success("README.md encontrado")
+        else:
+            print_warning("README.md não encontrado")
+        
+        print_success("FASE 4 (Sklearn): OK!")
+        return True
+        
+    except Exception as e:
+        print_error(f"Erro ao testar Fase 4 (Sklearn): {e}")
+        return False
+
+def test_fase4_dados():
+    """Testa Fase 4 - Dashboard e Previsões Agrícolas"""
+    print_header("FASE 4 - PREVISÕES INTELIGENTES (DADOS)")
+    
+    try:
+        if not FASE4_DADOS.exists():
+            print_error("Pasta Fase4/Dados/ não encontrada")
+            return False
+        
+        print_success("Pasta Fase4/Dados/ encontrada")
+        
+        # Verificar estrutura de pastas
+        subdirs = {
+            "database": FASE4_DADOS / "database",
+            "cursotiaor": FASE4_DADOS / "cursotiaor"
+        }
+        
+        found_subdirs = 0
+        for name, path in subdirs.items():
+            if path.exists():
+                print_success(f"  Subpasta {name}/ encontrada")
+                found_subdirs += 1
+            else:
+                print_warning(f"  Subpasta {name}/ não encontrada")
+        
+        # Verificar arquivos de dados/configuração
+        data_files = {
+            "logs_irrigacao_api.json": FASE4_DADOS / "logs_irrigacao_api.json",
+            "git-fase4.txt": FASE4_DADOS / "git-fase4.txt"
+        }
+        
+        print_info("Verificando arquivos de dados...")
+        for filename, filepath in data_files.items():
+            if filepath.exists():
+                print_success(f"  {filename}: ✓")
+            else:
+                print_warning(f"  {filename}: Não encontrado")
+        
+        # Verificar requirements.txt
+        requirements = FASE4_DADOS / "requirements.txt"
+        if requirements.exists():
+            print_success("requirements.txt encontrado")
+            with open(requirements, 'r') as f:
+                deps = f.read()
+                required_deps = ['streamlit', 'pandas', 'scikit-learn', 'numpy']
+                print_info("Dependências esperadas:")
+                for dep in required_deps:
+                    if dep in deps.lower():
+                        print_success(f"  {dep}")
+                    else:
+                        print_warning(f"  {dep} não encontrado")
+        else:
+            print_warning("requirements.txt não encontrado")
+        
+        # Verificar estrutura de cursotiaor (cursos/materiais)
+        if (FASE4_DADOS / "cursotiaor").exists():
+            pbl_dir = FASE4_DADOS / "cursotiaor" / "pbl"
+            if pbl_dir.exists():
+                print_success("Estrutura de materiais (PBL) encontrada")
+                # Contar subpastas Fase
+                fases = list(pbl_dir.glob("Fase*"))
+                if fases:
+                    print_info(f"  {len(fases)} fase(s) de materiais encontrada(s)")
+        
+        print_success("FASE 4 (Dados): OK!")
+        return True
+        
+    except Exception as e:
+        print_error(f"Erro ao testar Fase 4 (Dados): {e}")
+        return False
+
 def generate_report():
     """Gera relatório final dos testes"""
     print_header("RELATÓRIO FINAL DE VALIDAÇÃO")
@@ -552,6 +675,8 @@ if __name__ == "__main__":
     resultados["Fase 2 Cap 6 - Sistema de Gestão"] = test_fase2_cap6()
     resultados["Fase 2 Cap 7 - Análise Estatística"] = test_fase2_cap7()
     resultados["Fase 3 - Dashboard Oracle/Streamlit"] = test_fase3()
+    resultados["Fase 4 - Classificação de Grãos"] = test_fase4_sklearn()
+    resultados["Fase 4 - Previsões Inteligentes"] = test_fase4_dados()
     
     # Gerar relatório
     exit_code = generate_report()
